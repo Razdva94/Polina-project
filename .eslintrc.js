@@ -54,7 +54,7 @@ module.exports = {
     "function-paren-newline": "off",
     "implicit-arrow-linebreak": "off",
     "consistent-return": "off",
-    "camelcase": "off",
+    camelcase: "off",
     "quote-props": "off",
     "react/no-unknown-property": "off",
     "no-useless-escape": "off",
@@ -65,6 +65,7 @@ module.exports = {
     "import/no-extraneous-dependencies": "off",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-closing-tag-location": "off",
-    "import/no-duplicates": "off"
+    "import/no-duplicates": "off",
+    "react/jsx-one-expression-per-line": "off",
   },
 };

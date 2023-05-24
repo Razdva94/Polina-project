@@ -3,15 +3,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "./styles.css";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 import seaPicture from "../images/sea.jpg";
 import forest from "../images/forest.jpg";
 import sky from "../images/sky.jpg";
+import "../blocks/header/header__swiper-styles.css";
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
-export default function App() {
+export default function Header() {
   const slides = [
     {
       id: 1,
@@ -36,11 +36,11 @@ export default function App() {
       centeredSlides={true}
       allowTouchMove={false}
       navigation={false}
-      loop={false}
+      loop={true}
       speed={2000}
       slidesPerView={1}
       autoplay={{
-        delay: 2000,
+        delay: 4000,
         disableOnInteraction: false,
       }}
       modules={[Autoplay, Pagination, Navigation]}
