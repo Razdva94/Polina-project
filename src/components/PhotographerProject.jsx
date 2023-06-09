@@ -13,13 +13,16 @@ function PhotographerProject() {
       setIsOpened(true);
     }
   }, [typeOfProject]);
-
+  function closePopup(){
+    setIsOpened(false);
+  }
   return (
     <ProjectPictures
       picture1={forest}
       picture2={sky}
       picture3={seaPicture}
       isOpened={isOpened}
+      closePopup={closePopup}
     />
   );
 }

@@ -15,6 +15,8 @@
 @import url(../blocks/lateral-info/__button/lateral-info__button.css);
 @import url(../blocks/lateral-info/__stripe/lateral-info__stripe.css);
 @import url(../blocks/lateral-info/__cross/lateral-info__cross.css);
+@import url(../blocks/lateral-info/__text/lateral-info__text.css);
+@import url(../blocks/lateral-info/__icon-container/lateral-info__icon-container.css);
 /*header*/
 @import url(../blocks/header/header.css);
 /* portfolio */
@@ -45,6 +47,7 @@
 @import url(../blocks/footer/__text/footer__text.css);
 @import url(../blocks/footer/__text-container/footer__text-container.css);
 @import url(../blocks/footer/__icon/footer__icon.css);
+@import url(../blocks/footer/__icon/_type/footer__icon_type_instagram.css);
 /*scrollbar*/
 @import url(../blocks/scrollbar/scrollbar.css);
 /*project*/ 

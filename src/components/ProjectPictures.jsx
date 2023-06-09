@@ -4,10 +4,15 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import usePopupClose from "../hooks/usePopupClose";
 
-function ProjectPictures({ picture1, picture2, picture3, isOpened }) {
+function ProjectPictures({ picture1, picture2, picture3, isOpened, closePopup }) {
+  usePopupClose(isOpened, closePopup);
   return (
-    <div className={`project ${isOpened && "project_opened"}`} style={{ overflow: "hidden" }}>
+    <div
+      className={`project ${isOpened && "project_opened"}`}
+      style={{ overflow: "hidden" }}
+    >
       <Swiper
         cssMode={true}
         navigation={true}

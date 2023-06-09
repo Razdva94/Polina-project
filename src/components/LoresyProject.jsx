@@ -13,13 +13,16 @@ function LoresyProject() {
       setIsOpened(true);
     }
   }, [typeOfProject]);
-
+  function closePopup(){
+    setIsOpened(false);
+  }
   return (
     <ProjectPictures
       picture1={seaPicture}
       picture2={forest}
       picture3={sky}
       isOpened={isOpened}
+      closePopup={closePopup}
     />
   );
 }

@@ -12,7 +12,7 @@ function OrderButton() {
   }
   return (
     <button type="button" className="order-button" onClick={handleNavigate}>
-      OrderButton
+      Оставить заявку
     </button>
   );
 }

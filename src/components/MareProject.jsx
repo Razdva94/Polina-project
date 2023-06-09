@@ -13,13 +13,16 @@ function MareProject() {
       setIsOpened(true);
     }
   }, [typeOfProject]);
-
+  function closePopup(){
+    setIsOpened(false);
+  }
   return (
     <ProjectPictures
       picture1={sky}
       picture2={forest}
       picture3={seaPicture}
       isOpened={isOpened}
+      closePopup={closePopup}
     />
   );
 }

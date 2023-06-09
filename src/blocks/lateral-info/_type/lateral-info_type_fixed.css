@@ -3,8 +3,8 @@
   position: fixed;
   width: 5vw;
   height: 100vh;
-  justify-content: center;
   align-items: center;
   z-index: 5;
   background-color: black;
+  flex-direction: column;
 }

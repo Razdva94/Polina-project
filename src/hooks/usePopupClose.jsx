@@ -1,18 +1,24 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { closePortfolioPictures } from "../store/portfolioSlice";
 
-export default function usePopupClose(isOpen, closePopup) {
+export default function usePopupClose(isOpened, closePopup) {
+  const dispatch = useDispatch();
   React.useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpened) return;
 
     const handleOverlay = (event) => {
       if (event.target.classList.contains("project_opened")) {
         closePopup();
+        dispatch(closePortfolioPictures());
       }
+      console.log(isOpened);
     };
 
     const handleEscape = (e) => {
       if (e.key === "Escape") {
         closePopup();
+        dispatch(closePortfolioPictures());
       }
     };
 
@@ -22,5 +28,5 @@ export default function usePopupClose(isOpen, closePopup) {
       document.removeEventListener("keydown", handleEscape);
       document.removeEventListener("mousedown", handleOverlay);
     };
-  }, [isOpen, closePopup]);
+  }, [isOpened, closePopup, dispatch]);
 }

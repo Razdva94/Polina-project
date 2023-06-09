@@ -1,0 +1,8 @@
+.lateral-info__icon-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  height: 25vh;
+  justify-content: space-around;
+}

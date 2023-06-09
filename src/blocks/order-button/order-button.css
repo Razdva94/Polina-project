@@ -10,4 +10,6 @@
   color: white;
   z-index: 3;
   border: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
