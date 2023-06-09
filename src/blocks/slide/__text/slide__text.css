@@ -1,0 +1,52 @@
+.slide__text {
+  color: rgb(73, 68, 68);
+  cursor: pointer;
+ position: relative;
+ margin-bottom: 10vh;
+ text-decoration: none;
+ animation: text-animation 1s forwards;
+ opacity: 0;
+}
+
+
+.slide__text::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: rgb(50, 50, 50);
+  transition: width 0.5s ease-in-out;
+  border-bottom: 1px solid rgb(64, 64, 65);
+}
+
+
+
+.slide__text:hover::before {
+  width: 100%;
+  animation: underline-anim 0.5s forwards;
+}
+
+
+@keyframes underline-anim {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes text-animation {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+
+
+

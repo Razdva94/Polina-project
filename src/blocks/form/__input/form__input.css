@@ -1,0 +1,11 @@
+.form__input{
+  width: 35vw;
+  height: 30px;
+  margin-top: 10px;
+  padding: 7px 3px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.form__input::placeholder{
+  color:grey;
+}

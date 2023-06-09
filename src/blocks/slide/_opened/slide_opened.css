@@ -1,0 +1,25 @@
+.slide_opened {
+  animation: slide-animation .3s forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  height: 100vh;
+  margin-left: 5vw;
+  background-color: rgba(218, 223, 235, .5);
+  z-index: 3;
+  text-align: center;
+  align-items: center;
+}
+
+
+
+@keyframes slide-animation {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 20vw;
+  }
+}

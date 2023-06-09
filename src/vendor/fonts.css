@@ -21,3 +21,14 @@
   src: url(./fonts/Inter-Black.woff2) format("woff2"),
        url(./fonts/Inter-Black.woff) format("woff");
 }
+@font-face {
+  font-family: 'Unbounded';
+  src: url(./fonts/Unbounded-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url(./fonts/CenturyGothic.woff2) format('woff2');
+  font-weight: 400;
+}

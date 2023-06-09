@@ -1,0 +1,22 @@
+.lateral-info__cross {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.lateral-info__cross::before, .lateral-info__cross::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: white;
+  transform-origin: center center;
+}
+
+.lateral-info__cross::before {
+  transform: rotate(45deg);
+}
+
+.lateral-info__cross::after {
+  transform: rotate(-45deg);
+}

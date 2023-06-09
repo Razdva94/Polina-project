@@ -1,0 +1,30 @@
+.slide_closed {
+  animation: slide-close-animation 0.3s forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  height: 100vh;
+  margin-left: 5vw;
+  background-color: rgba(218, 223, 235, .5);
+  z-index: 3;
+  text-align: center;
+  align-items: center;
+  opacity: .5;
+}
+
+@keyframes slide-close-animation {
+  from {
+    width: 20vw;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+
+
+
+
+
