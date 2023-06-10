@@ -1,5 +1,6 @@
 import React from "react";
 import Select from "react-select";
+import { motion } from "framer-motion";
 import Footer from "./Footer";
 
 const options = [
@@ -34,7 +35,13 @@ const customStyles = {
 
 function MakeAnOrder() {
   return (
-    <div className="page__container">
+    <motion.div
+      className="page__container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.7 }}
+    >
       <div className="order">
         <form className="form">
           <h2 className="form__title">Оформить заказ</h2>
@@ -73,7 +80,7 @@ function MakeAnOrder() {
         </div>
       </div>
       <Footer />
-    </div>
+    </motion.div>
   );
 }
 

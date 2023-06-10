@@ -1,8 +1,8 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import seaPicture from "../images/sea.jpg";
-import forest from "../images/forest.jpg";
-import sky from "../images/sky.jpg";
+import MarePortfolioTItle from "../images/MarePortfolioTitle.jpg";
+import TeaPortfolioTitle from "../images/TeaPortfolioTitle.jpg";
+import LoresiPortfolioTile from "../images/LoresiPortfolioTitle.jpg";
 import { openPortfolioPictures } from "../store/portfolioSlice";
 
 export default function Main() {
@@ -17,7 +17,7 @@ export default function Main() {
         <figure className="portfolio__element">
           <img
             className="portfolio__image"
-            src={seaPicture}
+            src={MarePortfolioTItle}
             alt="Loresi"
             onClick={handleOpenPictures}
           />
@@ -26,7 +26,7 @@ export default function Main() {
         <figure className="portfolio__element">
           <img
             className="portfolio__image"
-            src={sky}
+            src={TeaPortfolioTitle}
             alt="Mare"
             onClick={handleOpenPictures}
           />
@@ -35,7 +35,7 @@ export default function Main() {
         <figure className="portfolio__element">
           <img
             className="portfolio__image"
-            src={forest}
+            src={LoresiPortfolioTile}
             alt="Photographer"
             onClick={handleOpenPictures}
           />

@@ -4,9 +4,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
-import seaPicture from "../images/sea.jpg";
-import forest from "../images/forest.jpg";
-import sky from "../images/sky.jpg";
+import MareTitle from "../images/MareTitle.jpg";
+import LoresiTitle from "../images/LoresiTitle.jpg";
+import TeaTitle from "../images/TeaTitle.jpg";
 import "../blocks/header/header__swiper-styles.css";
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
@@ -15,18 +15,18 @@ export default function Header() {
   const slides = [
     {
       id: 1,
-      image: seaPicture,
-      alt: "море",
+      image: MareTitle,
+      alt: "Mare-title",
     },
     {
       id: 2,
-      image: forest,
-      alt: "лес",
+      image: TeaTitle,
+      alt: "Tea-title",
     },
     {
       id: 3,
-      image: sky,
-      alt: "небо",
+      image: LoresiTitle,
+      alt: "Loresi-title",
     },
   ];
 

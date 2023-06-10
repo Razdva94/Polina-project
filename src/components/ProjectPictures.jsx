@@ -21,7 +21,7 @@ function ProjectPictures({ picture1, picture2, picture3, isOpened, closePopup })
         keyboard={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="mySwiper"
-        style={{ width: "40%", margin: "auto", height: "80%" }}
+        style={{ width: "40%", margin: "auto", height: "84%" }}
       >
         <SwiperSlide style={{ height: "100%" }}>
           <div className="slide-image-wrapper">
@@ -88,7 +88,7 @@ function ProjectPictures({ picture1, picture2, picture3, isOpened, closePopup })
         .slide-image-wrapper {
           width: 100%;
           height: 100%;
-          overflow: hidden; /* Отключение скролла на элементе-обертке */
+          overflow: hidden; 
         }
 
         .slide-image {

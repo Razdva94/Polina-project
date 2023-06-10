@@ -1,4 +1,4 @@
-.order-button{
+/* .order-button{
   margin: 0;
   padding: 0;
   position: fixed;
@@ -6,10 +6,41 @@
   right: 50px;
   width: 200px;
   height: 50px;
-  background-color: black;
+  background-color: rgba(0,0,0,.0);
   color: white;
   z-index: 3;
   border: none;
   -webkit-user-select: none;
   user-select: none;
+  border: 2px solid white
+}
+
+.order-button:hover {
+background-color: white;
+color: black;
+cursor: pointer;
+} */
+
+.order-button {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  width: 200px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, .0);
+  color: white;
+  z-index: 3;
+  border: none;
+  -webkit-user-select: none;
+  user-select: none;
+  border: 2px solid white;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.order-button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }

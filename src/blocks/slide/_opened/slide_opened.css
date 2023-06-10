@@ -6,8 +6,8 @@
   position: fixed;
   height: 100vh;
   margin-left: 5vw;
-  background-color: rgba(236, 230, 230, 0.922);
-  z-index: 3;
+  background-color: rgba(30, 30, 30, 0.2);
+  z-index: 10;
   text-align: center;
   align-items: center;
 }

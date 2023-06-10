@@ -19,6 +19,7 @@
 @import url(../blocks/lateral-info/__icon-container/lateral-info__icon-container.css);
 /*header*/
 @import url(../blocks/header/header.css);
+@import url(../blocks/header/__text/header__text.css);
 /* portfolio */
 @import url(../blocks/portfolio/__title/portfolio__title.css);
 @import url(../blocks/portfolio/__element/portfolio__element.css);
