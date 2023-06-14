@@ -8,11 +8,12 @@ export default function usePopupClose(isOpened, closePopup) {
     if (!isOpened) return;
 
     const handleOverlay = (event) => {
-      if (event.target.classList.contains("project_opened")) {
+      if (
+        event.target.classList.contains("project_opened")
+      ) {
         closePopup();
         dispatch(closePortfolioPictures());
       }
-      console.log(isOpened);
     };
 
     const handleEscape = (e) => {

@@ -12,8 +12,6 @@
   align-items: center;
 }
 
-
-
 @keyframes slide-animation {
   from {
     width: 0;

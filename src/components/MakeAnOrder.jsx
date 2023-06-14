@@ -72,12 +72,41 @@ function MakeAnOrder() {
         </form>
         <div className="contacts">
           <h2 className="form__title">Связь со мной</h2>
-          <p className="form__text">+TELEGRAM</p>
-          <p className="form__text">+WHATSAPP</p>
-          <p className="form__text">+INSTAGRAM</p>
-          <p className="form__text">+BEHANCE</p>
+          <a
+            href="https://wa.me/+79819412392"
+            target="_blank"
+            rel="noreferrer"
+            className="form__text"
+          >
+            +TELEGRAM
+          </a>
+          <a
+            className="form__text"
+            href="https://wa.me/+79819412392"
+            target="_blank"
+            rel="noreferrer"
+          >
+            +WHATSAPP
+          </a>
+          <a
+            className="form__text"
+            href="https://www.instagram.com/polinam_design/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            +INSTAGRAM
+          </a>
+          <a
+            className="form__text"
+            href="https://www.behance.net/polinaadesign"
+            target="_blank"
+            rel="noreferrer"
+          >
+            +BEHANCE
+          </a>
           <p className="form__text">MAISHEVA.POLINA@MAIL.RU</p>
         </div>
+        <div className="animation"></div>
       </div>
       <Footer />
     </motion.div>

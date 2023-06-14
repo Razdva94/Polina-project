@@ -1,0 +1,12 @@
+.scroll3D__frame {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:.75s cubic-bezier(.075, .5, 0, 1), opacity .75s ease;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+

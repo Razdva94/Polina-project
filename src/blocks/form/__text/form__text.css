@@ -1,5 +1,17 @@
 .form__text{
   color: black;
   height: 35px;
+  text-decoration: none;
+  transition: opacity .8 ease-in-out;
+  display: block;
+  margin-top: 16px;
+}
+
+.form__text:hover{
+opacity: .5;
+}
+
+.form__text:nth-child(6):hover{
+  opacity: 1;
 }
 

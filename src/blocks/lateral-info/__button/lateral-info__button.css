@@ -9,4 +9,10 @@
   background-color: black;
   border: none;
   margin-top: 130px;
+  outline: none;
+  transition: opacity, .5s ease-in-out
+}
+
+.lateral-info__button:hover{
+opacity: .5
 }

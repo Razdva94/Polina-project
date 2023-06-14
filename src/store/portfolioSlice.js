@@ -15,6 +15,8 @@ const portfolioSlice = createSlice({
   },
 });
 
-export const { openPortfolioPictures, closePortfolioPictures } =
-  portfolioSlice.actions;
+export const {
+  openPortfolioPictures,
+  closePortfolioPictures,
+} = portfolioSlice.actions;
 export default portfolioSlice.reducer;

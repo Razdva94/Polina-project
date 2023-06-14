@@ -1,0 +1,3 @@
+.scroll3D__frame-media_right{
+  left: calc(var(--side-small) /2 * var(--index) + var(--gutter) *45)
+}

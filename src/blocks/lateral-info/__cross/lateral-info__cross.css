@@ -2,6 +2,7 @@
   width: 40px;
   height: 40px;
   position: relative;
+  transition: opacity .5s ease-in-out
 }
 
 .lateral-info__cross::before, .lateral-info__cross::after {
@@ -19,4 +20,8 @@
 
 .lateral-info__cross::after {
   transform: rotate(-45deg);
+}
+
+.lateral-info__cross:hover{
+  opacity: .5;
 }

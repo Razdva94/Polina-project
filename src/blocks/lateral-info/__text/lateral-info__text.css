@@ -4,4 +4,10 @@
   transform: rotate(-180deg);
   font-size: 20px;
   margin-top: 36px;
+  cursor: pointer;
+  transition: opacity .8s
+}
+
+.lateral-info__text:hover{
+opacity: 0.5;
 }
