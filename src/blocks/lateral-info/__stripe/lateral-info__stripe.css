@@ -1,8 +1,5 @@
 .lateral-info__stripe{
   width: 100%;
-  height: 1px;
-}
-
-.lateral-info__stripe:nth-child(2){
   height: 0.5px;
 }
+

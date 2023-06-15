@@ -11,7 +11,6 @@
 @import url(../blocks/body/body.css);
 /*lateral-info*/
 @import url(../blocks/lateral-info/lateral-info.css);
-@import url(../blocks/lateral-info/_type/lateral-info_type_fixed.css);
 @import url(../blocks/lateral-info/__button/lateral-info__button.css);
 @import url(../blocks/lateral-info/__stripe/lateral-info__stripe.css);
 @import url(../blocks/lateral-info/__cross/lateral-info__cross.css);

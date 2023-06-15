@@ -1,6 +1,5 @@
 .portfolio__image{
   height: 55vh;
-  width: 100%;
   transition: transform .3s ease-in-out;
   cursor: pointer;
 }

@@ -29,7 +29,6 @@ export default function Header() {
       alt: "Loresi-title",
     },
   ];
-
   return (
     <Swiper
       spaceBetween={0}
@@ -43,6 +42,7 @@ export default function Header() {
         delay: 4000,
         disableOnInteraction: false,
       }}
+      style={{ paddingBottom: "120px", backgroundColor: "rgb(7,7,7)" }}
       modules={[Autoplay, Pagination, Navigation]}
       className="mySwiper"
     >

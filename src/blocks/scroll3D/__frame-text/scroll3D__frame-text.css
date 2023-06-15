@@ -2,5 +2,5 @@
   font-weight: 100;
   text-transform: uppercase;
   text-align: center;
-  font-size: calc(var(--index)* 30);
+  font-size: calc(var(--index)* 50);
 }

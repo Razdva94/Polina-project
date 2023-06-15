@@ -1,3 +1,5 @@
-.page__container{
+.page__container {
   width: 95vw;
+  background-color: #ecebeb;
+  margin-left: 5vw;
 }
