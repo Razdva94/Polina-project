@@ -6,7 +6,7 @@
   row-gap: 43px;
   justify-content: center;
   margin-bottom: 30px;
-  margin-left: 47px;
+  margin-left: 4vw;
 }
 
 .portfolio__container img {
@@ -16,6 +16,7 @@
 @media screen and (max-width: 1150px) {
   .portfolio__container{
     margin-left: 0;
+    grid-template-columns: repeat(auto-fit, minmax(635px, 1fr));
   }
 }
 @media screen and (max-width: 600px) {

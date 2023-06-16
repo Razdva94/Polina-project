@@ -2,6 +2,7 @@
   height: 55vh;
   transition: transform .3s ease-in-out;
   cursor: pointer;
+  justify-self: center;
 }
 
 .portfolio__image:hover {
@@ -10,12 +11,12 @@
 
 @media screen and (max-width: 1150px) {
   .portfolio__image {
-    justify-self: end;
+    justify-self: center;
   }
 
-  .portfolio__image:nth-child(2){
+  /* .portfolio__image:nth-child(2){
     justify-self: start;
-  }
+  } */
 }
 @media screen and (max-width: 727px) {
   .portfolio__image {
