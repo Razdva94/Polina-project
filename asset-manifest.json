@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Polina-project/static/css/main.b32d403a.css",
+    "main.css": "/Polina-project/static/css/main.7178978f.css",
     "main.js": "/Polina-project/static/js/main.5e5a8b1a.js",
     "static/js/787.cc28de6f.chunk.js": "/Polina-project/static/js/787.cc28de6f.chunk.js",
     "static/media/Unbounded-Regular.ttf": "/Polina-project/static/media/Unbounded-Regular.d2a446434fd598e4bb22.ttf",
@@ -36,12 +36,12 @@
     "static/media/TeaSlide2.jpg": "/Polina-project/static/media/TeaSlide2.ab3ef2d8ce3640ada254.jpg",
     "static/media/i.webp": "/Polina-project/static/media/i.616608fdbfa93a981318.webp",
     "index.html": "/Polina-project/index.html",
-    "main.b32d403a.css.map": "/Polina-project/static/css/main.b32d403a.css.map",
+    "main.7178978f.css.map": "/Polina-project/static/css/main.7178978f.css.map",
     "main.5e5a8b1a.js.map": "/Polina-project/static/js/main.5e5a8b1a.js.map",
     "787.cc28de6f.chunk.js.map": "/Polina-project/static/js/787.cc28de6f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b32d403a.css",
+    "static/css/main.7178978f.css",
     "static/js/main.5e5a8b1a.js"
   ]
 }
