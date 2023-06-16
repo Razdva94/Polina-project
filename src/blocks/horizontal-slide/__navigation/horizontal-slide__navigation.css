@@ -1,0 +1,7 @@
+.horizontal-slide__navigation{
+  margin-top: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+

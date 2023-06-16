@@ -1,52 +1,38 @@
 .slide__text {
-  color: rgb(73, 68, 68);
-  cursor: pointer;
- position: relative;
- margin-bottom: 10vh;
- text-decoration: none;
- animation: text-animation 1s forwards;
- opacity: 0;
+  animation: text-animation 1s forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+  display: flex;
+  align-items: flex-end;
 }
-
-
-.slide__text::before {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: white;
-  transition: width 0.5s ease-in-out;
-  border-bottom: 0.5px solid white;
-}
-
-
 
 .slide__text:hover::before {
   width: 100%;
   animation: underline-anim 0.5s forwards;
 }
 
-
+@media screen and (max-width: 840px) {
+  .slide__text {
+    font-size: 12.5px;
+    height: 37.1px;
+}
+}
 @keyframes underline-anim {
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
 }
 
 @keyframes text-animation {
-  from{
+  from {
     opacity: 0;
   }
-  to{
+
+  to {
     opacity: 1;
   }
 }
-
-
-
-

@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { closePortfolioPictures } from "../store/portfolioSlice";
+import { closePortfolioPictures } from "../spare_components/portfolioSlice";
 
 export default function usePopupClose(isOpened, closePopup) {
   const dispatch = useDispatch();

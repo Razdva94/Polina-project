@@ -7,3 +7,14 @@
   height: 25vh;
   justify-content: space-around;
 }
+
+@media screen and (max-width: 600px) {
+  .lateral-info__icon-container{
+  flex-direction: row;
+  height: auto;
+  margin-bottom: auto;
+  width: 50vw;
+  margin-right: auto;
+  margin-left: 0vw;
+  }
+}

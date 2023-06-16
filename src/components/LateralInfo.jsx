@@ -1,30 +1,43 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import stripe from "../images/stripe.png";
-import { toggleSlide } from "../store/slideSlice";
+import { toggleSlide, closeSlide } from "../store/slideSlice";
+import { defineDisplayWithSlide } from "../spare_components/mobileSlideSlice";
 import instagram from "../images/i.webp";
 import Slide from "./Slide";
+import HorizontalSlide from "./HorizontalSlide";
 
 function LateralInfo() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const slideState = useSelector((state) => state.slide.slide);
-  const laterflInfoState = useSelector(
-    (state) => state.portfolio.portfolio
+  const displayWithState = useSelector(
+    (state) => state.mobileSlide.displayState
   );
+
+  useEffect(() => {
+    function handleResize() {
+      dispatch(defineDisplayWithSlide(window.innerWidth < 601));
+    }
+    window.addEventListener("resize", handleResize);
+    dispatch(closeSlide());
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, [dispatch, displayWithState]);
+
   function manageSlide() {
     dispatch(toggleSlide());
-    console.log(laterflInfoState);
+    console.log(slideState);
   }
+
   function navigatetoMain() {
     navigate("/");
   }
   return (
     <>
-      <div className="lateral-info"></div>
-      <div className="lateral-info_type_fixed">
+      <div className="lateral-info">
         <div className="lateral-info__text" onClick={navigatetoMain}>
           Maisheva Polina
         </div>
@@ -66,7 +79,7 @@ function LateralInfo() {
           )}
           {slideState && (
             // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-            <div className="lateral-info__cross" onClick={manageSlide}></div>
+            <div className="lateral-info__cross"></div>
           )}
         </button>
         <div className="lateral-info__icon-container">
@@ -112,7 +125,8 @@ function LateralInfo() {
           </a>
         </div>
       </div>
-      <Slide />
+      {!displayWithState && <Slide />}
+      {displayWithState && slideState && <HorizontalSlide />}
     </>
   );
 }

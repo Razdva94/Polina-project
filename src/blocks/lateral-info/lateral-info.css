@@ -1,10 +1,23 @@
-.lateral-info_type_fixed{
+.lateral-info {
   display: flex;
   position: fixed;
   width: 5.1vw;
   height: 100vh;
   align-items: center;
-  z-index: 5;
+  z-index: 8;
   background-color: black;
   flex-direction: column;
+}
+
+@media screen and (max-width: 800px) {
+  .lateral-info{
+   width: 8.1vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .lateral-info{
+    width: 100vw;
+    height: 8vh;
+    flex-direction: row;
+  }
 }

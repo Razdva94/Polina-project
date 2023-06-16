@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleSlide, slideClose } from "../store/slideSlice";
+import { toggleSlide, closeSlide } from "../store/slideSlice";
 
 function Slide() {
   const dispatch = useDispatch();
@@ -17,7 +17,6 @@ function Slide() {
 
   useEffect(() => {
     const delay = 500;
-
     const timeoutId = setTimeout(() => {
       setStartAnimation(false);
     }, delay);
@@ -75,13 +74,13 @@ function Slide() {
       !slideRef.current.contains(event.target) &&
       event.target.className !== "lateral-info__button"
     ) {
-      dispatch(slideClose());
+      dispatch(closeSlide());
     }
   }
 
   function handleKeyDown(event) {
     if (event.key === "Escape") {
-      dispatch(slideClose());
+      dispatch(closeSlide());
     }
   }
 
@@ -107,14 +106,14 @@ function Slide() {
           !textAppearDelay.portfolio && "slide__text"
         } slide__text_type_animated`}
       >
-        Портфолио
+        ПОРТФОЛИО
       </h2>
       <h2
         className={`${textAppearDelay.price && "slide"} ${
           !textAppearDelay.price && "slide__text"
         } slide__text_type_animated`}
       >
-        Цены
+        ЦЕНЫ
       </h2>
       <h2
         onClick={handleNavigate}
@@ -122,7 +121,7 @@ function Slide() {
           !textAppearDelay.aboutMe && "slide__text"
         } slide__text_type_animated`}
       >
-        Обо мне
+        ОБО МНЕ
       </h2>
     </div>
   );

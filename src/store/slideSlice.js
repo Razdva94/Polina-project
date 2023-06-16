@@ -9,11 +9,11 @@ const slideSlice = createSlice({
     toggleSlide(state) {
       state.slide = !state.slide;
     },
-    slideClose(state) {
+    closeSlide(state) {
       state.slide = false;
     },
   },
 });
 
-export const { toggleSlide, slideClose } = slideSlice.actions;
+export const { toggleSlide, closeSlide } = slideSlice.actions;
 export default slideSlice.reducer;

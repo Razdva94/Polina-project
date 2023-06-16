@@ -1,9 +1,21 @@
 .portfolio__container {
   display: grid;
   margin-top: 50px;
-  grid-template-columns: repeat(auto-fit, 400px);
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   column-gap: 30px;
   row-gap: 43px;
   justify-content: center;
   margin-bottom: 30px;
+  margin-left: 47px;
+}
+@media screen and (max-width: 1150px) {
+  .portfolio__container{
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .portfolio__container{
+    grid-template-columns: none;
+    margin-left: 0;
+  }
 }

@@ -10,6 +10,11 @@
   max-width: 100%;
 }
 
+@media screen and (max-width: 600px) {
+  .page{
+  flex-direction: column;
+  }
+}
 @keyframes fade-in {
   0% {
     opacity: 0;

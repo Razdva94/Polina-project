@@ -2,7 +2,7 @@
   color: white;
   writing-mode: vertical-lr;
   transform: rotate(-180deg);
-  font-size: calc(var(--index));;
+  font-size: calc(var(--index));
   margin-top: 7vh;
   cursor: pointer;
   transition: opacity .8s
@@ -10,4 +10,10 @@
 
 .lateral-info__text:hover{
 opacity: 0.5;
+}
+
+@media screen and (max-width: 600px) {
+  .lateral-info__text{
+  display: none;
+  }
 }
