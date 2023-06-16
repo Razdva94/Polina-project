@@ -9,11 +9,6 @@
   flex-direction: column;
 }
 
-/* @media screen and (max-width: 800px) {
-  .lateral-info{
-   width: 8.1vw;
-  }
-} */
 @media screen and (max-width: 1025px) {
   .lateral-info{
     width: 100vw;
