@@ -40,7 +40,7 @@ function App() {
           {mare3D || tea3D ? null : <LateralInfo />}
           <Routes location={location} key={location.pathname}>
             <Route
-              path="/"
+              path="/Polina-project"
               element={(
                 <motion.div
                   className="page__container"

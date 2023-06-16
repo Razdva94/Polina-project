@@ -33,7 +33,7 @@ function LateralInfo() {
   }
 
   function navigatetoMain() {
-    navigate("/");
+    navigate("/Polina-project");
   }
   return (
     <>
