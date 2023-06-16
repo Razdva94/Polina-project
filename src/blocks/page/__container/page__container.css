@@ -1,6 +1,7 @@
 .page__container {
   width: 95vw;
   background-color: #ecebeb;
+  margin-left: 5vw;
 }
 
 @media screen and (max-width: 1025px) {
