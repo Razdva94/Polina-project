@@ -13,9 +13,15 @@
   opacity: .5;
 }
 
+@media screen and (max-width:1025px) {
+  .slide_closed{
+    margin-left: 0;
+  }
+}
+
 @keyframes slide-close-animation {
   from {
-    width: 20vw;
+    width: 28vw;
   }
   to {
     width: 0;

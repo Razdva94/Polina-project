@@ -11,12 +11,6 @@
   animation: underline-anim 0.5s forwards;
 }
 
-@media screen and (max-width: 840px) {
-  .slide__text {
-    font-size: 12.5px;
-    height: 37.1px;
-}
-}
 @keyframes underline-anim {
   from {
     width: 0;

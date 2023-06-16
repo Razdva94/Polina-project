@@ -29,7 +29,6 @@ function LateralInfo() {
 
   function manageSlide() {
     dispatch(toggleSlide());
-    console.log(slideState);
   }
 
   function navigatetoMain() {
