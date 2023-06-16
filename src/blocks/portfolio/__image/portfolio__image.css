@@ -14,9 +14,6 @@
     justify-self: center;
   }
 
-  /* .portfolio__image:nth-child(2){
-    justify-self: start;
-  } */
 }
 @media screen and (max-width: 727px) {
   .portfolio__image {

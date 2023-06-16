@@ -5,3 +5,8 @@
   width: calc(var(--index) * var(--side-small)* 5);
   height: calc(var(--index) * var(--side-big) * 5);
 }
+@media screen and (max-width: 768px) {
+  .scroll3D__frame-media {
+    background-size: contain;
+  }
+}
