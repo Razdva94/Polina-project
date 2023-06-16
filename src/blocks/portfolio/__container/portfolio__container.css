@@ -8,6 +8,11 @@
   margin-bottom: 30px;
   margin-left: 47px;
 }
+
+.portfolio__container img {
+  max-width: 100%;
+}
+
 @media screen and (max-width: 1150px) {
   .portfolio__container{
     margin-left: 0;
