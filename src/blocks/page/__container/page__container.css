@@ -4,13 +4,13 @@
   margin-left: 5vw;
 }
 
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
   .lateral-info{
    width: 92vw;
   }
-}
+} */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1025px) {
   .page__container{
     margin-left: 0;
     width: 100vw;

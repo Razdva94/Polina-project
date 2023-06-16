@@ -23,15 +23,15 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
   .order-button {
     top: 25px;
     right: 25px;
     height: 40px;
     width: 140px;
   }
-}
-@media screen and (max-width: 600px) {
+} */
+@media screen and (max-width: 1025px) {
   .order-button {
     display: none;
   }

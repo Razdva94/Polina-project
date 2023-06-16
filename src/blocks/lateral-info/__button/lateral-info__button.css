@@ -20,7 +20,7 @@
 opacity: .5
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1025px) {
   .lateral-info__button{
   margin-top: 4vh;
   width: 5vh;

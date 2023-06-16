@@ -8,7 +8,7 @@
   justify-content: space-around;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1025px) {
   .lateral-info__icon-container{
   flex-direction: row;
   height: auto;
