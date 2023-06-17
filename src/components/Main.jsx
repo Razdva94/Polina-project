@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { isMobile, isTablet } from "react-device-detect";
+// import { isMobile, isTablet } from "react-device-detect";
 import MarePortfolioTItle from "../images/MarePortfolioTitle.jpg";
 import TeaPortfolioTitle from "../images/TeaPortfolioTitle.jpg";
 import LoresiPortfolioTile from "../images/LoresiPortfolioTitle.jpg";
@@ -11,11 +11,9 @@ export default function Main() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   function handleOpenPictures(e) {
-    if (!isMobile && !isTablet) {
-      dispatch(openPortfolioPictures(e.target.alt));
-      e.target.alt === "Mare" ? navigate("/mare3D") : "";
-      e.target.alt === "Tea" ? navigate("/tea3D") : "";
-    }
+    dispatch(openPortfolioPictures(e.target.alt));
+    e.target.alt === "Mare" ? navigate("/mare3D") : "";
+    e.target.alt === "Tea" ? navigate("/tea3D") : "";
   }
   return (
     <section className="portfolio">

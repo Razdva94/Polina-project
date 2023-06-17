@@ -14,23 +14,29 @@
 }
 
 @media screen and (max-width:1025px) {
-  .slide_closed{
+  .slide_closed {
     margin-left: 0;
   }
 }
 
 @keyframes slide-close-animation {
   from {
-    width: 28vw;
+    width: 20vw;
   }
+
   to {
     width: 0;
   }
 }
 
+@media screen and (max-width: 1025px) {
+  @keyframes slide-close-animation {
+    from {
+      width: 28vw;
+    }
 
-
-
-
-
-
+    to {
+      width: 0;
+    }
+  }
+}
