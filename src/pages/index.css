@@ -66,3 +66,10 @@
 @import url(../blocks/horizontal-slide/horizontal-slide.css);
 @import url(../blocks/horizontal-slide/__text/horizontal-slide__text.css);
 @import url(../blocks/horizontal-slide/__navigation/horizontal-slide__navigation.css);
+/*prices*/
+@import url(../blocks/prices/prices.css);
+@import url(../blocks/prices/__select/prices__select.css);
+@import url(../blocks/prices/__header/prices__header.css);
+/*about-me*/
+@import url(../blocks/about-me/about-me.css);
+@import url(../blocks/about-me/__image/about-me__image.css);

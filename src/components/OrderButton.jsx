@@ -11,7 +11,11 @@ function OrderButton() {
     dispatch(closeSlide());
   }
   return (
-    <button type="button" className="order-button" onClick={handleNavigate}>
+    <button
+      type="button"
+      className="order-button"
+      onClick={handleNavigate}
+    >
       Оставить заявку
     </button>
   );

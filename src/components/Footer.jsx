@@ -1,14 +1,27 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import instagram from "../images/i.webp";
 
 function Footer() {
+  const navigate = useNavigate();
+
+  function goToPrices(){
+    navigate("/prices");
+  }
+
+  function goToMakeAnOrder(){
+    navigate("/make-an-order");
+  }
+  function goToAboutME(){
+    navigate("/about-me");
+  }
   return (
     <footer className="footer">
       <div className="footer__container">
         <div className="footer__text-container">
-          <p className="footer__text">Обо мне</p>
-          <p className="footer__text">Цены</p>
-          <p className="footer__text">Контакты</p>
+          <p className="footer__text" ocClick={goToAboutME}>Обо мне</p>
+          <p className="footer__text" onClick={goToPrices}>Цены</p>
+          <p className="footer__text" onClick={goToMakeAnOrder}>Оформить заказ</p>
         </div>
         <div className="footer__text-container">
           <a

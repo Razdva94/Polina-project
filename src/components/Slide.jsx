@@ -11,7 +11,7 @@ function Slide() {
     portfolio: true,
     price: true,
     aboutMe: true,
-    order: true
+    order: true,
   });
   const isOpened = useSelector((state) => state.slide.slide);
   const slideRef = useRef(null);
@@ -22,14 +22,13 @@ function Slide() {
     function handleResize() {
       setIsWideScreen(window.innerWidth <= 1024);
     }
-    console.log(isWideScreen);
     handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []); // Уберите зависимость isWideScreen
+  }, []);
 
   useEffect(() => {
     const delay = 500;
@@ -89,8 +88,22 @@ function Slide() {
     });
   }, [isOpened]);
 
-  function handleNavigate() {
+  function handleNavigateMain() {
     navigate("/Polina-project");
+    dispatch(toggleSlide());
+  }
+
+  function handleNavigateOrder() {
+    navigate("/make-an-order");
+    dispatch(toggleSlide());
+  }
+
+  function handleNavigatePrices() {
+    navigate("/prices");
+    dispatch(toggleSlide());
+  }
+  function handleNavigateAboutMe() {
+    navigate("/about-me");
     dispatch(toggleSlide());
   }
 
@@ -126,7 +139,7 @@ function Slide() {
       }`}
     >
       <h2
-        onClick={handleNavigate}
+        onClick={handleNavigateMain}
         className={`${textAppearDelay.portfolio && "slide"} ${
           !textAppearDelay.portfolio && "slide__text"
         } slide__text_type_animated`}
@@ -134,6 +147,7 @@ function Slide() {
         ПОРТФОЛИО
       </h2>
       <h2
+        onClick={handleNavigatePrices}
         className={`${textAppearDelay.price && "slide"} ${
           !textAppearDelay.price && "slide__text"
         } slide__text_type_animated`}
@@ -141,7 +155,7 @@ function Slide() {
         ЦЕНЫ
       </h2>
       <h2
-        onClick={handleNavigate}
+        onClick={handleNavigateAboutMe}
         className={`${textAppearDelay.aboutMe && "slide"} ${
           !textAppearDelay.aboutMe && "slide__text"
         } slide__text_type_animated`}
@@ -150,7 +164,7 @@ function Slide() {
       </h2>
       {isWideScreen && (
         <h2
-          onClick={handleNavigate}
+          onClick={handleNavigateOrder}
           className={`${textAppearDelay.order && "slide"} ${
             !textAppearDelay.order && "slide__text"
           } slide__text_type_animated`}

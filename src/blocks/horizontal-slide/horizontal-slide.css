@@ -1,18 +1,18 @@
 .horizontal-slide{
   position: fixed;
-  height: 14vh;
+  height: 5vh;
   width: 100vw;
   background-color: black;
   z-index: 7;
   animation: horizontal-slide-animation .3s forwards;
 }
 
-@keyframes .horizontal-slide-animation {
+@keyframes horizontal-slide-animation {
   from {
     height: 0;
   }
 
   to {
-    height: 14vh;
+    height: 9.5vh;
   }
 }

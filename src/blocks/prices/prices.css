@@ -1,0 +1,24 @@
+.prices {
+  width: 95vw;
+  background-color: #f8f5f5;
+  margin-left: 5vw;
+  padding-bottom:20vh;
+  display: flex;
+  gap: 200px;
+  padding-top: 70px;
+}
+
+@media screen and (max-width: 1025px) {
+  .prices{
+    margin-left: 0;
+    width: 100vw;
+    margin-top: 6vh;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .prices{
+  flex-direction: column;
+  align-items: center;
+  }
+}

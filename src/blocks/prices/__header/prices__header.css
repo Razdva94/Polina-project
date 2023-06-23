@@ -1,0 +1,12 @@
+.prices__header{
+  margin-top: 0;
+  padding-top: 33.5px;
+  margin-left: 30px;
+  font-size: 40px;
+}
+
+@media screen and (max-width: 470px){
+.prices__header{
+  font-size: 25px;
+}
+}

@@ -9,12 +9,19 @@ import LateralInfo from "./LateralInfo";
 import MakeAnOrder from "./MakeAnOrder";
 import Mare3D from "./Mare3D";
 import Tea3D from "./Tea3D";
+import LoresyProject from "./LoresyProject";
+import MareProject from "./MareProject";
+import TeaProject from "./TeaProject";
+import Loresi3D from "./Loresi3D";
+import Prices from "./Prices";
+import AboutMe from "./AboutMe";
 
 function App() {
   const location = useLocation();
   const [isLoaded, setIsLoaded] = useState(false);
   const [mare3D, setMare3D] = useState(false);
   const [tea3D, setTea3D] = useState(false);
+  const [loresi3D, setLoresi3D] = useState(false);
 
   useEffect(() => {
     const handleLoad = () => {
@@ -31,13 +38,14 @@ function App() {
   useEffect(() => {
     setMare3D(location.pathname === "/mare3D");
     setTea3D(location.pathname === "/tea3D");
+    setLoresi3D(location.pathname === "/loresi3D");
   }, [location]);
 
   return (
     <AnimatePresence>
       {isLoaded && (
         <div className={tea3D ? "" : "page scrollbar"}>
-          {mare3D || tea3D ? null : <LateralInfo />}
+          {mare3D || tea3D || loresi3D ? null : <LateralInfo />}
           <Routes location={location} key={location.pathname}>
             <Route
               path="/Polina-project"
@@ -53,6 +61,9 @@ function App() {
                   <Main />
                   <Footer />
                   <OrderButton />
+                  <LoresyProject />
+                  <MareProject />
+                  <TeaProject />
                 </motion.div>
               )}
             />
@@ -83,6 +94,19 @@ function App() {
               )}
             />
             <Route
+              path="/loresi3D"
+              element={(
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <Loresi3D />
+                </motion.div>
+              )}
+            />
+            <Route
               path="/make-an-order"
               element={(
                 <motion.div
@@ -93,6 +117,34 @@ function App() {
                   transition={{ duration: 0.5 }}
                 >
                   <MakeAnOrder />
+                </motion.div>
+              )}
+            />
+            <Route
+              path="/prices"
+              element={(
+                <motion.div
+                  className=""
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Prices />
+                </motion.div>
+              )}
+            />
+            <Route
+              path="/about-me"
+              element={(
+                <motion.div
+                  className=""
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <AboutMe />
                 </motion.div>
               )}
             />

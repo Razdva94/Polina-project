@@ -16,6 +16,29 @@
   transition: background-color 0.5s ease, color 0.5s ease;
   font-size: calc(var(--index)) * 0.8;
 }
+.order-button_black {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  width: 200px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, .0);
+  color: black;
+  z-index: 3;
+  border: none;
+  -webkit-user-select: none;
+  user-select: none;
+  border: 2px solid black;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  font-size: calc(var(--index)) * 0.8;
+}
+.order-button_black:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
 
 .order-button:hover {
   background-color: white;
@@ -23,16 +46,15 @@
   cursor: pointer;
 }
 
-/* @media screen and (max-width: 900px) {
-  .order-button {
-    top: 25px;
-    right: 25px;
-    height: 40px;
-    width: 140px;
-  }
-} */
+
 @media screen and (max-width: 1025px) {
   .order-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .order-button_black {
     display: none;
   }
 }

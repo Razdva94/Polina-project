@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Scroll3D({ frames }) {
+  console.log(frames);
   const navigate = useNavigate();
   const [transforms, setTransforms] = useState([]);
   const [top, setTop] = useState(-1500);

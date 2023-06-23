@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable jsx-a11y/img-redundant-alt */
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import "swiper/css";
@@ -6,14 +7,25 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import usePopupClose from "../hooks/usePopupClose";
 
-function ProjectPictures({ picture1, picture2, picture3, isOpened, closePopup }) {
+function ProjectPictures({ pictures, isOpened, closePopup }) {
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+
   usePopupClose(isOpened, closePopup);
+  const swiperKey = isOpened ? "opened" : "closed";
+  useEffect(() => {
+    if (isOpened) {
+      // Установить текущий индекс слайда при открытии
+      setCurrentSlideIndex(0);
+    }
+  }, [isOpened]);
+
   return (
     <div
       className={`project ${isOpened && "project_opened"}`}
       style={{ overflow: "hidden" }}
     >
       <Swiper
+        key={swiperKey}
         cssMode={true}
         navigation={true}
         pagination={true}
@@ -21,38 +33,29 @@ function ProjectPictures({ picture1, picture2, picture3, isOpened, closePopup })
         keyboard={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="mySwiper"
-        style={{ width: "40%", margin: "auto", height: "84%" }}
+        style={{
+          width: " calc(var(--index) * var(--side-small)*.9)",
+          margin: "auto",
+          height: "calc(var(--index) * var(--side-big)*.8)",
+        }}
+        initialSlide={currentSlideIndex}
+        shouldSwiperUpdate={true}
+        slidesPerView={1}
+        loop={true}
+        spaceBetween={0}
       >
-        <SwiperSlide style={{ height: "100%" }}>
-          <div className="slide-image-wrapper">
-            <img
-              src={picture1}
-              alt="seaPicture"
-              className="slide-image"
-              style={{ objectPosition: "center" }}
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide style={{ height: "100%" }}>
-          <div className="slide-image-wrapper">
-            <img
-              src={picture2}
-              alt="Mare"
-              className="slide-image"
-              style={{ objectPosition: "center" }}
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide style={{ height: "100%" }}>
-          <div className="slide-image-wrapper">
-            <img
-              src={picture3}
-              alt="forest"
-              className="slide-image"
-              style={{ objectPosition: "center" }}
-            />
-          </div>
-        </SwiperSlide>
+        {pictures.map((picture, index) => (
+          <SwiperSlide key={index} style={{ height: "100%" }}>
+            <div className="slide-image-wrapper">
+              <img
+                src={picture}
+                alt={`Picture ${index + 1}`}
+                className="slide-image"
+                style={{ objectPosition: "center" }}
+              />
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
       <style>
         {`
@@ -88,7 +91,7 @@ function ProjectPictures({ picture1, picture2, picture3, isOpened, closePopup })
         .slide-image-wrapper {
           width: 100%;
           height: 100%;
-          overflow: hidden; 
+          overflow: hidden;
         }
 
         .slide-image {
@@ -98,7 +101,7 @@ function ProjectPictures({ picture1, picture2, picture3, isOpened, closePopup })
         }
 
         .swiper-slide {
-          outline: none; 
+          outline: none;
         }
 
         body, #root {

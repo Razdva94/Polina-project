@@ -1,0 +1,13 @@
+.about-me__image{
+  width: calc(var(--index) * var(--side-small)*0.95);
+  height: calc(var(--index) * var(--side-big)*1);
+  float: left;
+  margin-right: 12vw;
+}
+
+@media screen and (max-width: 950px){
+  .about-me__image{
+    margin-right: 2vw;
+    margin-bottom: 2vw;
+  }
+}
