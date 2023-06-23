@@ -19,7 +19,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer__container">
         <div className="footer__text-container">
-          <p className="footer__text" ocClick={goToAboutME}>Обо мне</p>
+          <p className="footer__text" onClick={goToAboutME}>Обо мне</p>
           <p className="footer__text" onClick={goToPrices}>Цены</p>
           <p className="footer__text" onClick={goToMakeAnOrder}>Оформить заказ</p>
         </div>
