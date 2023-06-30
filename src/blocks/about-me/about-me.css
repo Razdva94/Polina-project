@@ -1,0 +1,15 @@
+.about-me {
+  margin: 0;
+  padding: 10% 9% 10%;
+  line-height: 23px;
+  font-size: 15px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+@media screen and (max-width: 600px) {
+  .about-me {
+    margin: 0;
+    padding: 10% 10% 10%;
+  }
+}

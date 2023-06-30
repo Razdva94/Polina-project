@@ -1,0 +1,7 @@
+.scroll3D__frame-media {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  width: calc(var(--index) * var(--side-small)* 5);
+  height: calc(var(--index) * var(--side-big) * 5);
+}

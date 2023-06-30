@@ -1,0 +1,9 @@
+.footer__icon{
+  width: 25px;
+  height: 25px;
+  transition: opacity .8s
+}
+
+.footer__icon:hover{
+  opacity: 0.5;
+  }

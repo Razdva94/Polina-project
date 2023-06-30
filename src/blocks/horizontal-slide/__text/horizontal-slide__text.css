@@ -1,0 +1,17 @@
+.horizontal-slide__text{
+  color: white;
+  font-size:calc(var(--index)*1);
+  opacity: 0; 
+  animation: horizontal-text-animation 1.5s forwards;
+  animation-delay: 0.3s;
+  cursor: pointer;
+}
+
+@keyframes horizontal-text-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

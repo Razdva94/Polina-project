@@ -1,0 +1,29 @@
+.lateral-info__button {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 25px;
+  justify-content: space-around;
+  width: 50%;
+  cursor: pointer;
+  background-color: black;
+  border: none;
+  outline: none;
+  transition: opacity, .5s ease-in-out;
+  margin-top: 50vh;
+  transform: translateY(-50%);
+  padding: 0;
+}
+
+.lateral-info__button:hover{
+opacity: .5
+}
+
+@media screen and (max-width: 1025px) {
+  .lateral-info__button{
+  margin-top: 20px;
+  width: 5vh;
+  right: 5vw;
+  }
+}

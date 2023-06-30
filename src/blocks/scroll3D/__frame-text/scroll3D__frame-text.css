@@ -1,0 +1,6 @@
+.scroll3D__frame-text{
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: calc(var(--index)* 50);
+}

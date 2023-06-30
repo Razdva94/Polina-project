@@ -1,0 +1,32 @@
+.slide__text {
+  animation: text-animation 1s forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+  display: flex;
+  align-items: flex-end;
+}
+
+.slide__text:hover::before {
+  width: 100%;
+  animation: underline-anim 0.5s forwards;
+}
+
+@keyframes underline-anim {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes text-animation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

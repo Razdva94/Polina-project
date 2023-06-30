@@ -1,0 +1,25 @@
+.order{
+  padding: 5% 10%;
+  display: flex;
+  margin-bottom: 150px;
+  justify-content: space-around;
+}
+@media screen and (max-width: 900px){
+  .order{
+    margin-left: 10px;
+    gap: 0;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 800px){
+  .order{
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 600px){
+  .order{
+    margin-left: 10px;
+    flex-direction: column;
+    padding: 0;
+  }
+}

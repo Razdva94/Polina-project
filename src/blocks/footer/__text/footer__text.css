@@ -1,0 +1,9 @@
+.footer__text{
+  color: white;
+  cursor: pointer;
+  transition: opacity .8s
+}
+
+.footer__text:hover{
+  opacity: 0.5;
+  }

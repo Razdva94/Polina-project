@@ -1,0 +1,10 @@
+.scroll3D__text{
+  position:absolute;
+  font-size: larger;
+  color: white;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 8;
+  caret-color: transparent;
+}

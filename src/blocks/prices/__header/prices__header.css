@@ -1,0 +1,10 @@
+.prices__header{
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 470px){
+.prices__header{
+  font-size: 15px;
+}
+}

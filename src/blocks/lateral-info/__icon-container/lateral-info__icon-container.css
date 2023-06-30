@@ -1,0 +1,20 @@
+.lateral-info__icon-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: auto;
+  margin-bottom: 7vh;
+  height: 25vh;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 1025px) {
+  .lateral-info__icon-container{
+  flex-direction: row;
+  height: auto;
+  margin-bottom: auto;
+  width: 30vw;
+  margin-right: auto;
+  margin-left: 4vw;
+  }
+}

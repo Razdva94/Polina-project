@@ -1,0 +1,5 @@
+.form__input_type_textarea{
+  height: 200px;
+  resize: none;
+  width: auto;
+}

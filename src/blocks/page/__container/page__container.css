@@ -1,0 +1,13 @@
+.page__container {
+  width: 95vw;
+  background-color: #f8f5f5;
+  margin-left: 5vw;
+}
+
+@media screen and (max-width: 1025px) {
+  .page__container{
+    margin-left: 0;
+    width: 100vw;
+    margin-top: 6vh
+  }
+}

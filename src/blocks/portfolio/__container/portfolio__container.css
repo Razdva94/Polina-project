@@ -1,0 +1,20 @@
+.portfolio__container {
+  display: grid;
+  margin-top: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  column-gap: 30px;
+  row-gap: 43px;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-left: 2vw;
+  margin-right: 2vw;
+
+}
+
+.portfolio__container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+

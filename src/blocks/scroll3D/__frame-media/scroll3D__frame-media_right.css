@@ -1,0 +1,14 @@
+.scroll3D__frame-media_right{
+  left: calc(var(--side-small) /2 * var(--index) + var(--gutter) *30)
+}
+
+@media screen and (max-width: 1220px) {
+  .scroll3D__frame-media_right {
+    left: calc(var(--side-small) /2 * var(--index) + var(--gutter)*15)
+  }
+}
+@media screen and (max-width: 800px) {
+  .scroll3D__frame-media_right {
+    left: calc(var(--side-small) /2 * var(--index) + var(--gutter)*10)
+  }
+}

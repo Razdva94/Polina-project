@@ -1,0 +1,19 @@
+.prices {
+  padding: 5% 20% 5% 7%;
+  display: flex;
+  margin-bottom: 150px;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 1025px) {
+  .prices{
+    margin-left: 0;
+    margin-top: 6vh;
+  }
+}
+@media screen and (max-width: 800px) {
+  .prices{
+  flex-direction: column;
+  align-items: center;
+  }
+}

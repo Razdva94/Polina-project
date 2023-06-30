@@ -1,0 +1,10 @@
+.form__select {
+  height: 50px;
+  margin-top: 10px;
+  width: 35.65vw;
+}
+@media screen and (max-width: 900px){
+.form__select {
+  width: auto;
+}
+}

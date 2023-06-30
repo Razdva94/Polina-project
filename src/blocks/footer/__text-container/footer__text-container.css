@@ -1,0 +1,6 @@
+.footer__text-container{
+  display: flex;
+  gap: 30px;
+  font-size: 15px;
+  justify-content: center;
+}

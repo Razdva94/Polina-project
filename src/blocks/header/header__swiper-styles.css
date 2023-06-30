@@ -1,0 +1,14 @@
+.swiper-slide {
+  width: 100vw;
+  height: 100vh;
+}
+
+.swiper-slide img {
+  width: 101%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+
+:root {
+  overflow-x: hidden;
+}
