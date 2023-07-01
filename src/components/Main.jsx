@@ -11,9 +11,6 @@ export default function Main() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   function handleOpenPictures(e) {
-    e.target.alt === "Mare" ? navigate("/mare3D") : "";
-    e.target.alt === "Tea" ? navigate("/tea3D") : "";
-    e.target.alt === "Loresi" ? navigate("/loresi3D") : "";
     if (isMobile || isTablet) {
       e.target.alt === "Mare"
         ? dispatch(openPortfolioPictures(e.target.alt))
@@ -24,6 +21,10 @@ export default function Main() {
       e.target.alt === "Tea"
         ? dispatch(openPortfolioPictures(e.target.alt))
         : "";
+    } else {
+      e.target.alt === "Mare" ? navigate("/mare3D") : "";
+      e.target.alt === "Tea" ? navigate("/tea3D") : "";
+      e.target.alt === "Loresi" ? navigate("/loresi3D") : "";
     }
   }
   return (
