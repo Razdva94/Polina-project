@@ -48,12 +48,12 @@ function Scroll3D({ frames }) {
   }, [delta]);
 
   function handleOverlay() {
-    navigate("/Polina-project");
+    navigate("/");
   }
   useEffect(() => {
     function handleKeyDown(event) {
       if (event.key === "Escape") {
-        navigate("/Polina-project");
+        navigate("/");
       }
     }
 

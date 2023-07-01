@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 function HorizontalSlide() {
   const navigate = useNavigate();
   function goToPortfolio() {
-    navigate("/Polina-project");
+    navigate("/");
   }
   function goToOrder() {
     navigate("/make-an-order");

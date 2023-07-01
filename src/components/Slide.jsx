@@ -89,7 +89,7 @@ function Slide() {
   }, [isOpened]);
 
   function handleNavigateMain() {
-    navigate("/Polina-project");
+    navigate("/");
     dispatch(toggleSlide());
   }
 
