@@ -138,6 +138,9 @@ const customStyles = {
   priceText: {
     marginLeft: "auto",
   },
+  css19bb58m: {
+    display: "none",
+  },
 };
 
 function CustomOption({ innerProps, label }) {
