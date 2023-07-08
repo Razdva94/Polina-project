@@ -1,3 +1,4 @@
+import React from "react";
 /* eslint-disable no-useless-return */
 /* eslint-disable react/jsx-no-undef */
 // import React, { useState, useEffect } from "react";
@@ -43,7 +44,9 @@ function App() {
   //   setLoresi3D(location.pathname === "/loresi3D");
   // }, [location]);
 
-  return;
+  return (
+    <div>здарова</div>
+  );
   // <AnimatePresence>
   //   {isLoaded && (
   //     <div className={tea3D ? "" : "page scrollbar"}>
