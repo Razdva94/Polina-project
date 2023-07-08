@@ -1,7 +1,6 @@
-import React from "react";
 /* eslint-disable no-useless-return */
 /* eslint-disable react/jsx-no-undef */
-// import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 // import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 // import Header from "./Header";
@@ -21,22 +20,22 @@ import { AnimatePresence } from "framer-motion";
 
 function App() {
   // const location = useLocation();
-  // const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   // const [mare3D, setMare3D] = useState(false);
   // const [tea3D, setTea3D] = useState(false);
   // const [loresi3D, setLoresi3D] = useState(false);
 
-  // useEffect(() => {
-  //   const handleLoad = () => {
-  //     setIsLoaded(true);
-  //   };
+  useEffect(() => {
+    const handleLoad = () => {
+      setIsLoaded(true);
+    };
 
-  //   window.addEventListener("load", handleLoad);
+    window.addEventListener("load", handleLoad);
 
-  //   return () => {
-  //     window.removeEventListener("load", handleLoad);
-  //   };
-  // }, []);
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, []);
 
   // useEffect(() => {
   //   setMare3D(location.pathname === "/mare3D");
@@ -46,10 +45,10 @@ function App() {
 
   return (
     <AnimatePresence>
-      <div>здарова</div>
+      {isLoaded && (<div>здарова</div>
+      )}
     </AnimatePresence>
   );
-  // {isLoaded && (
   //     <div className={tea3D ? "" : "page scrollbar"}>
   //       {mare3D || tea3D || loresi3D ? null : <LateralInfo />}
   //       <Routes location={location} key={location.pathname}>
@@ -156,7 +155,6 @@ function App() {
   //         />
   //       </Routes>
   //     </div>
-  //   )}
 }
 
 export default App;
