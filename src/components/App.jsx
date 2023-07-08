@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import Header from "./Header";
-import Main from "./Main";
-import Footer from "./Footer";
-import OrderButton from "./OrderButton";
+// import Header from "./Header";
+// import Main from "./Main";
+// import Footer from "./Footer";
+// import OrderButton from "./OrderButton";
 import LateralInfo from "./LateralInfo";
 import MakeAnOrder from "./MakeAnOrder";
 import Mare3D from "./Mare3D";
 import Tea3D from "./Tea3D";
-import LoresyProject from "./LoresyProject";
-import MareProject from "./MareProject";
-import TeaProject from "./TeaProject";
+// import LoresyProject from "./LoresyProject";
+// import MareProject from "./MareProject";
+// import TeaProject from "./TeaProject";
 import Loresi3D from "./Loresi3D";
 import Prices from "./Prices";
 import AboutMe from "./AboutMe";
@@ -57,13 +57,13 @@ function App() {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.7 }}
                 >
-                  <Header className="header" />
+                  {/* <Header className="header" />
                   <Main />
                   <Footer />
                   <OrderButton />
                   <LoresyProject />
                   <MareProject />
-                  <TeaProject />
+                  <TeaProject /> */}
                 </motion.div>
               )}
             />
