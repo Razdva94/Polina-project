@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import Header from "./Header";
+// import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 import OrderButton from "./OrderButton";
@@ -57,7 +57,7 @@ function App() {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.7 }}
                 >
-                  <Header className="header" />
+                  {/* <Header className="header" /> */}
                   <Main />
                   <Footer />
                   <OrderButton />
