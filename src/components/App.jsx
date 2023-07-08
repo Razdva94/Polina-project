@@ -6,15 +6,15 @@ import { AnimatePresence, motion } from "framer-motion";
 // import Footer from "./Footer";
 // import OrderButton from "./OrderButton";
 import LateralInfo from "./LateralInfo";
-import MakeAnOrder from "./MakeAnOrder";
+// import MakeAnOrder from "./MakeAnOrder";
 // import Mare3D from "./Mare3D";
 // import Tea3D from "./Tea3D";
 // import LoresyProject from "./LoresyProject";
 // import MareProject from "./MareProject";
 // import TeaProject from "./TeaProject";
 // import Loresi3D from "./Loresi3D";
-import Prices from "./Prices";
-import AboutMe from "./AboutMe";
+// import Prices from "./Prices";
+// import AboutMe from "./AboutMe";
 
 function App() {
   const location = useLocation();
@@ -106,7 +106,7 @@ function App() {
                 </motion.div>
               )}
             /> */}
-            <Route
+            {/* <Route
               path="/make-an-order"
               element={(
                 <motion.div
@@ -147,7 +147,7 @@ function App() {
                   <AboutMe />
                 </motion.div>
               )}
-            />
+              /> */}
           </Routes>
         </div>
       )}
