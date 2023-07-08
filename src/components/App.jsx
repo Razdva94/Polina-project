@@ -3,7 +3,7 @@ import React from "react";
 /* eslint-disable react/jsx-no-undef */
 // import React, { useState, useEffect } from "react";
 // import { Routes, Route, useLocation } from "react-router-dom";
-// import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 // import Header from "./Header";
 // import Main from "./Main";
 // import Footer from "./Footer";
@@ -45,10 +45,11 @@ function App() {
   // }, [location]);
 
   return (
-    <div>здарова</div>
+    <AnimatePresence>
+      <div>здарова</div>
+    </AnimatePresence>
   );
-  // <AnimatePresence>
-  //   {isLoaded && (
+  // {isLoaded && (
   //     <div className={tea3D ? "" : "page scrollbar"}>
   //       {mare3D || tea3D || loresi3D ? null : <LateralInfo />}
   //       <Routes location={location} key={location.pathname}>
@@ -156,7 +157,6 @@ function App() {
   //       </Routes>
   //     </div>
   //   )}
-  // </AnimatePresence>
 }
 
 export default App;
