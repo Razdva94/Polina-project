@@ -7,12 +7,12 @@ import { AnimatePresence, motion } from "framer-motion";
 // import OrderButton from "./OrderButton";
 import LateralInfo from "./LateralInfo";
 import MakeAnOrder from "./MakeAnOrder";
-import Mare3D from "./Mare3D";
-import Tea3D from "./Tea3D";
+// import Mare3D from "./Mare3D";
+// import Tea3D from "./Tea3D";
 // import LoresyProject from "./LoresyProject";
 // import MareProject from "./MareProject";
 // import TeaProject from "./TeaProject";
-import Loresi3D from "./Loresi3D";
+// import Loresi3D from "./Loresi3D";
 import Prices from "./Prices";
 import AboutMe from "./AboutMe";
 
@@ -67,7 +67,7 @@ function App() {
                 </motion.div>
               )}
             />
-            <Route
+            {/* <Route
               path="/mare3D"
               element={(
                 <motion.div
@@ -105,7 +105,7 @@ function App() {
                   <Loresi3D />
                 </motion.div>
               )}
-            />
+            /> */}
             <Route
               path="/make-an-order"
               element={(
