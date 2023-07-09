@@ -25,28 +25,12 @@ function App() {
   const [mare3D, setMare3D] = useState(false);
   const [tea3D, setTea3D] = useState(false);
   const [loresi3D, setLoresi3D] = useState(false);
-  const [appLoaded, setAppLoaded] = useState(false);
   useEffect(() => {
     setMare3D(location.pathname === "/mare3D");
     setTea3D(location.pathname === "/tea3D");
     setLoresi3D(location.pathname === "/loresi3D");
   }, [location]);
 
-  const handleAppLoaded = () => {
-    setAppLoaded(true);
-  };
-  useEffect(() => {
-    window.addEventListener("load", handleAppLoaded);
-
-    return () => {
-      window.removeEventListener("load", handleAppLoaded);
-    };
-  }, []);
-
-  if (!appLoaded) {
-    // Display loading spinner or any other loading indicator here
-    return <div>Loading...</div>;
-  }
   return (
     <div>
       <AnimatePresence>
