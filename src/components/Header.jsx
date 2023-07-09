@@ -10,7 +10,6 @@ import "../blocks/header/header__swiper-styles.css";
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 export default function Header({ images }) {
-  console.log(images[0]);
   const [isWideScreen, setIsWideScreen] = React.useState(false);
   const slides = [
     {
