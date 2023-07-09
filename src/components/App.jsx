@@ -9,6 +9,13 @@ import Footer from "./Footer";
 import OrderButton from "./OrderButton";
 import LateralInfo from "./LateralInfo";
 import Header from "./Header";
+import MareTitle from "../images/MareTitle.jpg";
+import LoresiTitle from "../images/LoresiTitle.jpg";
+import TeaTitle from "../images/TeaTitle.jpg";
+import mareSlide8 from "../images/mareSlide8.jpg";
+import teaSlide1 from "../images/teaSlide1.jpg";
+import loresiSlide9 from "../images/loresiSlide9.jpg";
+import ImagePreloader from "./ImagePreloader";
 
 const MakeAnOrder = lazy(() => import("./MakeAnOrder"));
 const Mare3D = lazy(() => import("./Mare3D"));
@@ -25,6 +32,14 @@ function App() {
   const [mare3D, setMare3D] = useState(false);
   const [tea3D, setTea3D] = useState(false);
   const [loresi3D, setLoresi3D] = useState(false);
+  const imagesToPreloadHeader = [
+    MareTitle,
+    TeaTitle,
+    LoresiTitle,
+    mareSlide8,
+    teaSlide1,
+    loresiSlide9,
+  ];
   useEffect(() => {
     setMare3D(location.pathname === "/mare3D");
     setTea3D(location.pathname === "/tea3D");
@@ -32,118 +47,131 @@ function App() {
   }, [location]);
 
   return (
-    <div>
-      <AnimatePresence>
-        <div className="page">
-          {mare3D || tea3D || loresi3D ? null : <LateralInfo />}
-          <Routes location={location} key={location.pathname}>
-            <Route
-              path="/"
-              element={(
-                <motion.div
-                  className="page__container"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.7 }}
-                >
-                  <Header className="header" />
-                  <Main />
-                  <Footer />
-                  <OrderButton />
-                  <LoresiProject />
-                  <MareProject />
-                  <TeaProject />
-                </motion.div>
+    <ImagePreloader images={imagesToPreloadHeader}>
+      <div>
+        <AnimatePresence>
+          <div className="page">
+            {mare3D || tea3D || loresi3D ? null : <LateralInfo />}
+            <Routes location={location} key={location.pathname}>
+              <Route
+                path="/"
+                element={(
+                  <motion.div
+                    className="page__container"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.7 }}
+                  >
+                    <Header images={imagesToPreloadHeader} className="header" />
+                    <Main />
+                    <Footer />
+                    <OrderButton />
+                    <LoresiProject />
+                    <MareProject />
+                    <TeaProject />
+                  </motion.div>
                 )}
-            />
+              />
 
-            <Route
-              path="/mare3D"
-              element={(
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <Suspense fallback={<h1>Loading...</h1>}><Mare3D /></Suspense>
-
-                </motion.div>
+              <Route
+                path="/mare3D"
+                element={(
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.8 }}
+                  >
+                    <Suspense fallback={<h1>Loading...</h1>}>
+                      <Mare3D />
+                    </Suspense>
+                  </motion.div>
                 )}
-            />
-            <Route
-              path="/tea3D"
-              element={(
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <Suspense fallback={<h1>Loading...</h1>}><Tea3D /></Suspense>
-                </motion.div>
+              />
+              <Route
+                path="/tea3D"
+                element={(
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.8 }}
+                  >
+                    <Suspense fallback={<h1>Loading...</h1>}>
+                      <Tea3D />
+                    </Suspense>
+                  </motion.div>
                 )}
-            />
-            <Route
-              path="/loresi3D"
-              element={(
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <Suspense fallback={<h1>Loading...</h1>}><Loresi3D /></Suspense>
-                </motion.div>
+              />
+              <Route
+                path="/loresi3D"
+                element={(
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.8 }}
+                  >
+                    <Suspense fallback={<h1>Loading...</h1>}>
+                      <Loresi3D />
+                    </Suspense>
+                  </motion.div>
                 )}
-            />
-            <Route
-              path="/make-an-order"
-              element={(
-                <motion.div
-                  className=""
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <Suspense fallback={<h1>Loading...</h1>}><MakeAnOrder /></Suspense>
-                </motion.div>
+              />
+              <Route
+                path="/make-an-order"
+                element={(
+                  <motion.div
+                    className=""
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <Suspense fallback={<h1>Loading...</h1>}>
+                      <MakeAnOrder />
+                    </Suspense>
+                  </motion.div>
                 )}
-            />
-            <Route
-              path="/prices"
-              element={(
-                <motion.div
-                  className=""
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <Suspense fallback={<h1>Loading...</h1>}><Prices /></Suspense>
-                </motion.div>
+              />
+              <Route
+                path="/prices"
+                element={(
+                  <motion.div
+                    className=""
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <Suspense fallback={<h1>Loading...</h1>}>
+                      <Prices />
+                    </Suspense>
+                  </motion.div>
                 )}
-            />
-            <Route
-              path="/about-me"
-              element={(
-                <motion.div
-                  className=""
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <Suspense fallback={<h1>Loading...</h1>}><AboutMe /></Suspense>
-                </motion.div>
+              />
+              <Route
+                path="/about-me"
+                element={(
+                  <motion.div
+                    className=""
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <Suspense fallback={<h1>Loading...</h1>}>
+                      <AboutMe />
+                    </Suspense>
+                  </motion.div>
                 )}
-            />
-          </Routes>
-        </div>
-      </AnimatePresence>
-    </div>
+              />
+            </Routes>
+          </div>
+        </AnimatePresence>
+      </div>
+    </ImagePreloader>
   );
 }
 
