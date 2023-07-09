@@ -11,7 +11,7 @@ import loresiSlide7 from "../images/loresiSlide7.jpg";
 import loresiSlide8 from "../images/loresiSlide8.jpg";
 import loresiSlide9 from "../images/loresiSlide9.jpg";
 
-function LoresyProject() {
+function LoresiProject() {
   const typeOfProject = useSelector((state) => state.portfolio.portfolio.type);
   const [isOpened, setIsOpened] = React.useState(false);
   const pictures = [loresiSlide1, loresiSlide2, loresiSlide3, loresiSlide4,
@@ -35,4 +35,4 @@ function LoresyProject() {
   );
 }
 
-export default LoresyProject;
+export default LoresiProject;
