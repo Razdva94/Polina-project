@@ -12,20 +12,20 @@ import "../blocks/header/header__swiper-styles.css";
 import mareSlide8 from "../images/mareSlide8.jpg";
 import teaSlide1 from "../images/teaSlide1.jpg";
 import loresiSlide9 from "../images/loresiSlide9.jpg";
-import ImagePreloader from "./ImagePreloader";
+// import ImagePreloader from "./ImagePreloader";
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 export default function Header() {
-  const imagesToPreload = [
-    MareTitle,
-    TeaTitle,
-    LoresiTitle,
-    TeaTitle,
-    mareSlide8,
-    teaSlide1,
-    loresiSlide9,
-  ];
+  // const imagesToPreload = [
+  //   MareTitle,
+  //   TeaTitle,
+  //   LoresiTitle,
+  //   TeaTitle,
+  //   mareSlide8,
+  //   teaSlide1,
+  //   loresiSlide9,
+  // ];
   const [isWideScreen, setIsWideScreen] = React.useState(false);
   const slides = [
     {
@@ -63,32 +63,32 @@ export default function Header() {
   }, []);
 
   return (
-    <ImagePreloader images={imagesToPreload}>
-      <Swiper
-        spaceBetween={0}
-        centeredSlides={true}
-        allowTouchMove={false}
-        navigation={false}
-        loop={true}
-        speed={2000}
-        slidesPerView={1}
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: false,
-        }}
-        style={{ paddingBottom: "120px", backgroundColor: "rgb(7,7,7)" }}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
-      >
-        {slides.map((slide) => (
-          <SwiperSlide key={slide.id}>
-            <img
-              src={isWideScreen ? slide.image : slide.mobileImage}
-              alt={slide.alt}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </ImagePreloader>
+  // <ImagePreloader images={imagesToPreload}>
+    <Swiper
+      spaceBetween={0}
+      centeredSlides={true}
+      allowTouchMove={false}
+      navigation={false}
+      loop={true}
+      speed={2000}
+      slidesPerView={1}
+      autoplay={{
+        delay: 4000,
+        disableOnInteraction: false,
+      }}
+      style={{ paddingBottom: "120px", backgroundColor: "rgb(7,7,7)" }}
+      modules={[Autoplay, Pagination, Navigation]}
+      className="mySwiper"
+    >
+      {slides.map((slide) => (
+        <SwiperSlide key={slide.id}>
+          <img
+            src={isWideScreen ? slide.image : slide.mobileImage}
+            alt={slide.alt}
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  // </ImagePreloader>
   );
 }
