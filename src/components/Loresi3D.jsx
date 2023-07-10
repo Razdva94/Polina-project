@@ -1,15 +1,15 @@
 import React from "react";
 import Scroll3D from "./Scroll3D";
-import loresiSlide0 from "../images/loresiSlide0.png";
-import loresiSlide1 from "../images/loresiSlide1.jpg";
-import loresiSlide2 from "../images/loresiSlide2.jpg";
-import loresiSlide3 from "../images/loresiSlide3.jpg";
-import loresiSlide4 from "../images/loresiSlide4.jpg";
-import loresiSlide5 from "../images/loresiSlide5.jpg";
-import loresiSlide6 from "../images/loresiSlide6.jpg";
-import loresiSlide7 from "../images/loresiSlide7.jpg";
-import loresiSlide8 from "../images/loresiSlide8.jpg";
-import loresiSlide9 from "../images/loresiSlide9.jpg";
+import loresiSlide0 from "../images/Loresi/loresiSlide0.png";
+import loresiSlide1 from "../images/Loresi/loresiSlide1.jpg";
+import loresiSlide2 from "../images/Loresi/loresiSlide2.jpg";
+import loresiSlide3 from "../images/Loresi/loresiSlide3.jpg";
+import loresiSlide4 from "../images/Loresi/loresiSlide4.jpg";
+import loresiSlide5 from "../images/Loresi/loresiSlide5.jpg";
+import loresiSlide6 from "../images/Loresi/loresiSlide6.jpg";
+import loresiSlide7 from "../images/Loresi/loresiSlide7.jpg";
+import loresiSlide8 from "../images/Loresi/loresiSlide8.jpg";
+import LoresiMobileTitle from "../images/Loresi/LoresiMobileTitle.jpg";
 
 function Loresi3D() {
   const frames = [
@@ -64,7 +64,7 @@ function Loresi3D() {
     },
     {
       id: 10,
-      image: loresiSlide9,
+      image: LoresiMobileTitle,
       mediaClass: "scroll3D__frame-media_left",
     }
   ];

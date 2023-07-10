@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unstable-nested-components */
 /* eslint-disable no-useless-return */
 /* eslint-disable react/jsx-no-undef */
-import React, { useEffect, useState } from "react";
+import React, {} from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Main from "./Main";
@@ -18,12 +18,12 @@ import TeaProject from "./TeaProject";
 import Loresi3D from "./Loresi3D";
 import Prices from "./Prices";
 import AboutMe from "./AboutMe";
-import MareTitle from "../images/MareTitle.jpg";
-import LoresiTitle from "../images/LoresiTitle.jpg";
-import TeaTitle from "../images/TeaTitle.jpg";
-import mareSlide8 from "../images/mareSlide8.jpg";
-import teaSlide1 from "../images/teaSlide1.jpg";
-import loresiSlide9 from "../images/loresiSlide9.jpg";
+import MareTitle from "../images/Mare/MareTitle.jpg";
+import LoresiTitle from "../images/Loresi/LoresiTitle.jpg";
+import TeaTitle from "../images/Tea/TeaTitle.jpg";
+import MareMobileTitle from "../images/Mare/MareMobileTitle.jpg";
+import TeaMobileTitle from "../images/Tea/TeaMobileTitle.jpg";
+import LoresiMobileTitle from "../images/Loresi/LoresiMobileTitle.jpg";
 import ImagePreloader from "./ImagePreloader";
 
 // const MakeAnOrder = lazy(() => import("./MakeAnOrder"));
@@ -38,34 +38,26 @@ import ImagePreloader from "./ImagePreloader";
 
 function App() {
   const location = useLocation();
-  const [mare3D, setMare3D] = useState(false);
-  const [tea3D, setTea3D] = useState(false);
-  const [loresi3D, setLoresi3D] = useState(false);
   const imagesToPreloadHeader = [
     MareTitle,
     TeaTitle,
     LoresiTitle,
-    mareSlide8,
-    teaSlide1,
-    loresiSlide9,
+    MareMobileTitle,
+    TeaMobileTitle,
+    LoresiMobileTitle,
   ];
-  useEffect(() => {
-    setMare3D(location.pathname === "/mare3D");
-    setTea3D(location.pathname === "/tea3D");
-    setLoresi3D(location.pathname === "/loresi3D");
-  }, [location]);
 
   return (
     <ImagePreloader images={imagesToPreloadHeader}>
       <div>
         <AnimatePresence>
           <div className="page">
-            {mare3D || tea3D || loresi3D ? null : <LateralInfo />}
+            {/* {mare3D || tea3D || loresi3D ? null : <LateralInfo />} */}
             <Routes location={location} key={location.pathname}>
               <Route
                 path="/"
                 element={(
-                  <motion.div
+                  <><LateralInfo /><motion.div
                     className="page__container"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -79,7 +71,7 @@ function App() {
                     <LoresiProject />
                     <MareProject />
                     <TeaProject />
-                  </motion.div>
+                  </motion.div></>
                 )}
               />
 
@@ -132,6 +124,7 @@ function App() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
                   >
+                    <LateralInfo />
                     <MakeAnOrder />
                   </motion.div>
                 )}
@@ -146,6 +139,7 @@ function App() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
                   >
+                    <LateralInfo />
                     <Prices />
                   </motion.div>
                 )}
@@ -160,6 +154,7 @@ function App() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
                   >
+                    <LateralInfo />
                     <AboutMe />
                   </motion.div>
                 )}

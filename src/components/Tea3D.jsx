@@ -1,13 +1,13 @@
 import React from "react";
 import Scroll3D from "./Scroll3D";
-import teaSlide1 from "../images/teaSlide1.jpg";
-import teaSlide2 from "../images/TeaSlide2.jpg";
-import teaSlide3 from "../images/teaSlide3.jpg";
-import teaSlide4 from "../images/teaSlide4.jpg";
-import teaSlide5 from "../images/teaSlide5.jpg";
-import teaSlide6 from "../images/teaSlide6.jpg";
-import teaSlide7 from "../images/teaSlide7.jpg";
-import teaSlide0 from "../images/teaSlide0.png";
+import TeaMobileTitle from "../images/Tea/TeaMobileTitle.jpg";
+import teaSlide2 from "../images/Tea/TeaSlide2.jpg";
+import teaSlide3 from "../images/Tea/teaSlide3.jpg";
+import teaSlide4 from "../images/Tea/teaSlide4.jpg";
+import teaSlide5 from "../images/Tea/teaSlide5.jpg";
+import teaSlide6 from "../images/Tea/teaSlide6.jpg";
+import teaSlide7 from "../images/Tea/teaSlide7.jpg";
+import teaSlide0 from "../images/Tea/teaSlide0.png";
 
 function Tea3D() {
   const frames = [
@@ -23,7 +23,7 @@ function Tea3D() {
     },
     {
       id: 3,
-      image: teaSlide1,
+      image: TeaMobileTitle,
       mediaClass: "scroll3D__frame-media_right",
     },
     {

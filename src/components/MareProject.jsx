@@ -1,14 +1,14 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import ProjectPictures from "./ProjectPictures";
-import mareSlide1 from "../images/mareSlide1.jpg";
-import mareSlide2 from "../images/mareSlide2.jpg";
-import mareSlide3 from "../images/mareSlide3.jpg";
-import mareSlide4 from "../images/mareSlide4.jpg";
-import mareSlide5 from "../images/mareSlide5.jpg";
-import mareSlide6 from "../images/mareSlide6.jpg";
-import mareSlide7 from "../images/mareSlide7.jpg";
-import mareSlide8 from "../images/mareSlide8.jpg";
+import mareSlide1 from "../images/Mare/mareSlide1.jpg";
+import mareSlide2 from "../images/Mare/mareSlide2.jpg";
+import mareSlide3 from "../images/Mare/mareSlide3.jpg";
+import mareSlide4 from "../images/Mare/mareSlide4.jpg";
+import mareSlide5 from "../images/Mare/mareSlide5.jpg";
+import mareSlide6 from "../images/Mare/mareSlide6.jpg";
+import mareSlide7 from "../images/Mare/mareSlide7.jpg";
+import MareMobileTitle from "../images/Mare/MareMobileTitle.jpg";
 
 function MareProject() {
   const typeOfProject = useSelector((state) => state.portfolio.portfolio.type);
@@ -21,7 +21,7 @@ function MareProject() {
     mareSlide5,
     mareSlide6,
     mareSlide7,
-    mareSlide8,
+    MareMobileTitle,
   ];
 
   React.useEffect(() => {
