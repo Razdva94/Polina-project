@@ -4,24 +4,9 @@
   justify-self: center;
   height: 100%;
   width: 100%;
+  aspect-ratio: 1/1;
 }
 
 .portfolio__image:hover {
   transform: scale(1.05);
-}
-
-@media screen and (max-width: 1150px) {
-  .portfolio__image {
-    justify-self: center;
-  }
-
-}
-@media screen and (max-width: 727px) {
-  .portfolio__image {
-    justify-self: center;
-  }
-
-  .portfolio__image:nth-child(2){
-    justify-self: center;
-  }
 }
