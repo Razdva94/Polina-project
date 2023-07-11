@@ -59,7 +59,10 @@ export default function Header({ images }) {
         delay: 4000,
         disableOnInteraction: false,
       }}
-      style={{ paddingBottom: "120px", backgroundColor: "rgb(7,7,7)" }}
+      style={{
+        paddingBottom: "100px",
+        backgroundColor: "rgb(7,7,7)",
+      }}
       modules={[Autoplay, Pagination, Navigation]}
       className="mySwiper"
     >
@@ -68,6 +71,7 @@ export default function Header({ images }) {
           <img
             src={isWideScreen ? slide.image : slide.mobileImage}
             alt={slide.alt}
+            style={{ objectFit: "contain" }}
           />
         </SwiperSlide>
       ))}
