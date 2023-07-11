@@ -15,7 +15,7 @@
 
 @media screen and (max-width: 600px){
   .about-me__image{
-    width: calc(var(--index) * var(--side-small)*1);
-    height: calc(var(--index) * var(--side-big)*.9);
+    width: calc(var(--index) * var(--side-small)*0.9);
+    height: calc(var(--index) * var(--side-big)*1);
   }
 }

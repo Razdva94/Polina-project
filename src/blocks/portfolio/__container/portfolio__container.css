@@ -13,9 +13,10 @@
 }
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .portfolio__container{
-  grid-template-rows: minmax(270px, 310px);
+ display: flex;
+ flex-wrap: wrap;
   }
 }
 
