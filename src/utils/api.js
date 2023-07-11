@@ -33,7 +33,7 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: "https://polinamdesign.ru/",
+  baseUrl: "https://polinamdesign.ru/api",
   headers: {
     "Content-Type": "application/json",
   },
