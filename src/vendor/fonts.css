@@ -32,3 +32,8 @@
   src: url(./fonts/CenturyGothic.woff2) format('woff2');
   font-weight: 400;
 }
+@font-face {
+  font-family: 'ProstoOne';
+  src: url(./fonts/ProstoOne-Regular.ttf) format('truetype');
+  font-weight: 400;
+}

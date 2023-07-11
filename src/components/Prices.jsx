@@ -74,7 +74,7 @@ function Prices() {
       <div className="prices__container">
         <div className="prices__block">
           <h2 className="prices__title">
-            <span style={{ fontFamily: "Inter" }}>Логотип </span>Lite
+            <span style={{ fontFamily: "ProstoOne" }}>Логотип </span>Lite
           </h2>
           {logoLite.map((string) => {
             return <p className="prices__text">{string}</p>;
@@ -93,7 +93,7 @@ function Prices() {
         </div>
         <div className="prices__block">
           <h2 className="prices__title">
-            <span style={{ fontFamily: "Inter" }}>Логотип </span> Standart
+            <span style={{ fontFamily: "ProstoOne" }}>Логотип </span> Standart
           </h2>
           {logoStandart.map((string) => {
             return <p className="prices__text">{string}</p>;
@@ -112,7 +112,7 @@ function Prices() {
         </div>
         <div className="prices__block">
           <h2 className="prices__title">
-            <span style={{ fontFamily: "Inter" }}>Фирменный стиль</span>
+            <span style={{ fontFamily: "ProstoOne" }}>Фирменный стиль</span>
           </h2>
           {formStyle.map((string) => {
             return <p className="prices__text">{string}</p>;
@@ -131,7 +131,7 @@ function Prices() {
         </div>
         <div className="prices__block">
           <h2 className="prices__title">
-            <span style={{ fontFamily: "Inter" }}>Instagram</span>
+            <span style={{ fontFamily: "ProstoOne" }}>Instagram</span>
           </h2>
           {instagram.map((string) => {
             return <p className="prices__text">{string}</p>;
@@ -150,7 +150,7 @@ function Prices() {
         </div>
         <div>
           <h2 className="prices__title">
-            <span style={{ fontFamily: "Inter" }}>Полиграфия</span>
+            <span style={{ fontFamily: "ProstoOne" }}>Полиграфия</span>
           </h2>
           {poligraph.map((string, i) => {
             return (

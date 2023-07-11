@@ -15,7 +15,7 @@ function AboutMe() {
           {/* <h2 style={{ fontWeight: 100, marginTop: 0, marginBottom: "35px" }}>
             Обо&nbsp;мне&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </h2> */}
-          <h1 style={{ marginBottom: "35px", marginTop: "0" }}>Маишева Полина</h1>
+          <h1 style={{ marginBottom: "35px", marginTop: "0", fontFamily: "ProstoOne", fontWeight: "100" }}>Маишева Полина</h1>
           <p style={{ marginTop: 0 }}>
             Привет! Меня зовут Полина, мне 26 и я Ваш бренд-дизайнер.
           </p>
