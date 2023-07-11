@@ -12,7 +12,7 @@ class Api {
       ...(message !== "" && { message }),
     };
 
-    return this._request(`${this._url}api/send-info`, {
+    return this._request(`${this._url}/send-info`, {
       method: "POST",
       headers: this._headers,
       body: JSON.stringify(requestBody),
@@ -33,7 +33,7 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: "https://polinamdesign/",
+  baseUrl: "https://polinamdesign.ru/",
   headers: {
     "Content-Type": "application/json",
   },
