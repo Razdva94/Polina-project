@@ -10,3 +10,10 @@
 .portfolio__image:hover {
   transform: scale(1.05);
 }
+
+@media screen and (max-width: 350px){
+  .portfolio__image {
+    height: 290px;
+    width: 290px;
+  }
+}
