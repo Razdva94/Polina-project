@@ -1,5 +1,4 @@
 .portfolio__image {
-  height: 55vh;
   transition: transform .3s ease-in-out;
   cursor: pointer;
   justify-self: center;
