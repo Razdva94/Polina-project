@@ -3,6 +3,8 @@
   transition: transform .3s ease-in-out;
   cursor: pointer;
   justify-self: center;
+  height: 100%;
+  width: 100%;
 }
 
 .portfolio__image:hover {
