@@ -1,7 +1,7 @@
 .portfolio__container {
   display: grid;
   margin-top: 50px;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   column-gap: 30px;
   row-gap: 30px;
   justify-content: center;
