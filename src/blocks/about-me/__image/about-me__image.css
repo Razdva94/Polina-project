@@ -19,3 +19,9 @@
     height: calc(var(--index) * var(--side-big)*1);
   }
 }
+
+@media screen and (max-width: 511px){
+  .about-me__image{
+    margin-bottom: 12vw;
+  }
+}
