@@ -9,15 +9,6 @@ import Footer from "./Footer";
 import OrderButton from "./OrderButton";
 import LateralInfo from "./LateralInfo";
 import Header from "./Header";
-// import MakeAnOrder from "./MakeAnOrder";
-// import Mare3D from "./Mare3D";
-// import Tea3D from "./Tea3D";
-// import LoresiProject from "./LoresiProject";
-// import MareProject from "./MareProject";
-// import TeaProject from "./TeaProject";
-// import Loresi3D from "./Loresi3D";
-// import Prices from "./Prices";
-// import AboutMe from "./AboutMe";
 import MareTitle from "../images/Mare/MareTitle.jpg";
 import LoresiTitle from "../images/Loresi/LoresiTitle.jpg";
 import TeaTitle from "../images/Tea/TeaTitle.jpg";
@@ -25,6 +16,7 @@ import MareMobileTitle from "../images/Mare/MareMobileTitle.jpg";
 import TeaMobileTitle from "../images/Tea/TeaMobileTitle.jpg";
 import LoresiMobileTitle from "../images/Loresi/LoresiMobileTitle.jpg";
 import ImagePreloader from "./ImagePreloader";
+import Preloader from "./Preloader";
 
 const MakeAnOrder = lazy(() => import("./MakeAnOrder"));
 const Mare3D = lazy(() => import("./Mare3D"));
@@ -89,7 +81,7 @@ function App() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8 }}
                   >
-                    <Suspense fallback={<p>Loading...</p>}>
+                    <Suspense fallback={<Preloader />}>
                       <Mare3D />
                     </Suspense>
                   </motion.div>
@@ -104,7 +96,7 @@ function App() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8 }}
                   >
-                    <Suspense fallback={<p>Loading...</p>}>
+                    <Suspense fallback={<Preloader />}>
                       <Tea3D />
                     </Suspense>
                   </motion.div>
@@ -119,7 +111,7 @@ function App() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8 }}
                   >
-                    <Suspense fallback={<p>Loading...</p>}>
+                    <Suspense fallback={<Preloader />}>
                       <Loresi3D />
                     </Suspense>
                   </motion.div>
@@ -135,7 +127,7 @@ function App() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <Suspense fallback={<p>Loading...</p>}>
+                    <Suspense fallback={<Preloader />}>
                       <LateralInfo />
                       <MakeAnOrder />
                     </Suspense>
@@ -152,7 +144,7 @@ function App() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <Suspense fallback={<p>Loading...</p>}>
+                    <Suspense fallback={<Preloader />}>
                       <LateralInfo />
                       <Prices />
                     </Suspense>
@@ -169,7 +161,7 @@ function App() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <Suspense fallback={<p>Loading...</p>}>
+                    <Suspense fallback={<Preloader />}>
                       <LateralInfo />
                       <AboutMe />
                     </Suspense>

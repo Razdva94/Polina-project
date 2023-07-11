@@ -8,6 +8,7 @@
   opacity: 0;
   animation: fade-in 2s ease-in-out forwards;
   max-width: 100%;
+  background-color: #f8f5f5;
 }
 
 @media screen and (max-width: 600px) {

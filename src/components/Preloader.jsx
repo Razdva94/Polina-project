@@ -1,17 +1,82 @@
+/* eslint-disable react/react-in-jsx-scope */
 import React from "react";
-import { Audio } from "react-loader-spinner";
+import { Triangle } from "react-loader-spinner";
 
-function Preloader(){
+// function Preloader() {
+//   return (
+//     <><div className="preloader">
+//       <Triangle
+//         height="180"
+//         width="180"
+//         color="black"
+//         ariaLabel="triangle-loading"
+//         wrapperStyle={{
+//           position: "absolute",
+//           top: "50%",
+//           left: "50%",
+//           transform: "translate(-50%, -50%)",
+//         }}
+//         wrapperClassName=""
+//         visible={true}
+//       />
+//     </div><div className="preloader">
+//       <Triangle
+//         height="120"
+//         width="120"
+//         color="black"
+//         ariaLabel="triangle-loading"
+//         wrapperStyle={{
+//           position: "absolute",
+//           top: "50%",
+//           left: "50%",
+//           transform: "translate(-50%, -50%)",
+//         }}
+//         wrapperClassName=""
+//         visible={true}
+//         direction={-1}
+//       />
+//     </div></>
+//   );
+// }
+
+// export default Preloader;
+function Preloader() {
   return (
-    <Audio
-      height="80"
-      width="80"
-      radius="9"
-      color="green"
-      ariaLabel="three-dots-loading"
-      wrapperStyle
-      wrapperClass
-    />
+    <>
+      <div className="preloader">
+        <Triangle
+          height={180}
+          width={180}
+          color="black"
+          ariaLabel="triangle-loading"
+          wrapperStyle={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+          }}
+          wrapperClassName=""
+          visible={true}
+        />
+      </div>
+      <div className="preloader-inner">
+        <Triangle
+          height={120}
+          width={120}
+          color="black"
+          ariaLabel="triangle-loading"
+          wrapperStyle={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+          }}
+          wrapperClassName=""
+          visible={true}
+          direction={-1}
+        />
+      </div>
+    </>
   );
 }
 

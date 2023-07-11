@@ -53,7 +53,7 @@ export default function Header({ images }) {
       allowTouchMove={false}
       navigation={false}
       loop={true}
-      speed={2000}
+      speed={700}
       slidesPerView={1}
       autoplay={{
         delay: 4000,

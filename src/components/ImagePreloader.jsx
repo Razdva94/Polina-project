@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Preloader from "./Preloader";
 
 function ImagePreloader({ images, children }) {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -25,7 +26,7 @@ function ImagePreloader({ images, children }) {
     preloadImages();
   }, [images]);
 
-  return isLoaded ? children : <p>loading...</p>;
+  return isLoaded ? children : <Preloader />;
 }
 
 export default ImagePreloader;

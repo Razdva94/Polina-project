@@ -19,7 +19,7 @@
 /*header*/
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__text/header__text.css);
-/* portfolio */
+/*portfolio */
 @import url(../blocks/portfolio/__title/portfolio__title.css);
 @import url(../blocks/portfolio/__image/portfolio__image.css);
 @import url(../blocks/portfolio/portfolio.css);
@@ -68,14 +68,20 @@
 @import url(../blocks/horizontal-slide/__text/horizontal-slide__text.css);
 @import url(../blocks/horizontal-slide/__navigation/horizontal-slide__navigation.css);
 /*prices*/
-@import url(../blocks/prices/prices.css);
-@import url(../blocks/prices/__select/prices__select.css);
+@import url(../blocks/prices/__title/prices__title.css);
 @import url(../blocks/prices/__header/prices__header.css);
+@import url(../blocks/prices/__container/prices__container.css);
+@import url(../blocks/prices/__text/prices__text.css);
+@import url(../blocks/prices/__block/prices__block.css);
 /*about-me*/
 @import url(../blocks/about-me/about-me.css);
 @import url(../blocks/about-me/__image/about-me__image.css);
+@import url(../blocks/about-me/__header/about-me__header.css);
 /*popup*/
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__text/popup__text.css);
+/*preloader*/
+@import url(../blocks/preloader/preloader.css);
+

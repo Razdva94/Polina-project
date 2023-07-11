@@ -1,4 +1,4 @@
-.prices__header{
+.about-me__header{
   font-family: "CenturyGothic" ;
   text-align: center;
   font-size: 17px;
@@ -10,18 +10,4 @@
   color: rgb(142, 137, 137);
   margin-bottom: 70px;
   font-weight: 100;
-  margin-left: 15vw;
-  margin-right: 15vw;
-}
-
-@media screen and (max-width: 1200px) {
-  .prices__header{
-    margin-left: 5vw;
-    margin-right: 5vw;
-  }
-}
-@media screen and (max-width: 1025px) {
-.prices__header{
-  margin-top: 130px;
-  }
 }

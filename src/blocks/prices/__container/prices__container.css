@@ -1,0 +1,18 @@
+.prices__container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit ,minmax(300px, 2fr));
+  grid-row-gap: 70px;
+  text-align: left;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  grid-column-gap: 150px;
+  margin-bottom: 70px;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .prices__container{
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+}

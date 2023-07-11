@@ -1,10 +1,11 @@
-import React, { lazy, Suspense } from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./pages/index.css";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import store from "./store";
 import reportWebVitals from "./reportWebVitals";
+import Preloader from "./components/Preloader";
 
 const App = lazy(() => import("./components/App"));
 
@@ -13,7 +14,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
-        <Suspense fallback={<p>Loading...</p>}>
+        <Suspense fallback={<Preloader />}>
           <App />
         </Suspense>
       </Provider>

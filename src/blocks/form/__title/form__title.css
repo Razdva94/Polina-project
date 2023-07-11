@@ -1,4 +1,6 @@
 .form__title{
-  font-size: 20px;
+  font-size: 25px;
   margin-bottom: 35px;
+  font-family: "Inter";
+  font-weight: 100;
 }
