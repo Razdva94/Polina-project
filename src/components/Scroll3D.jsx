@@ -16,6 +16,13 @@ function Scroll3D({ frames }) {
       setTop((prevTop) => prevTop + event.deltaY * 2);
       const newDelta = lastPos - (top + event.deltaY);
       setDelta(newDelta);
+      if (top > 2400) {
+        setTop(2400);
+      }
+      if (top < -1500){
+        setTop(-1500);
+      }
+      console.log(top);
     }
 
     window.addEventListener("wheel", handleScroll);
@@ -47,7 +54,7 @@ function Scroll3D({ frames }) {
     setOpacities(newOpacities);
   }, [delta]);
 
-  function handleOverlay() {
+  function handleCross() {
     navigate("/");
   }
   useEffect(() => {
@@ -63,8 +70,10 @@ function Scroll3D({ frames }) {
     };
   }, [navigate]);
   return (
-    <><p className="scroll3D__text">USE SCROLL</p>
-      <div className="scroll3D scroll3D__container" onClick={handleOverlay}>
+    <>
+      <p className="scroll3D__text">USE SCROLL</p>
+      <div className="scroll3D__cross" onClick={handleCross}></div>
+      <div className="scroll3D scroll3D__container">
         <section className="scroll3D__gallery">
           {frames.map((frame, index) => (
             <div
@@ -84,7 +93,8 @@ function Scroll3D({ frames }) {
             </div>
           ))}
         </section>
-      </div></>
+      </div>
+    </>
   );
 }
 

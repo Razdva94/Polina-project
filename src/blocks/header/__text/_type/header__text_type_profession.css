@@ -1,0 +1,11 @@
+.header__text_type_profession{
+  font-size: 30px;
+  font-family: "ProstoOne";
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 500px){
+  .header__text_type_profession{
+    font-size: 20px;
+  }
+}

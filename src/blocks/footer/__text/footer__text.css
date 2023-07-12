@@ -1,7 +1,10 @@
 .footer__text{
   color: white;
   cursor: pointer;
-  transition: opacity .8s
+  transition: opacity .8s;
+  text-decoration: none;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .footer__text:hover{

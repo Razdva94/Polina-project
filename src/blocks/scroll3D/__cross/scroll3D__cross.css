@@ -1,0 +1,32 @@
+.scroll3D__cross {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  transition: opacity .8s ease-in-out;
+  position: absolute;
+  top: 50px;
+  right: 150px;
+  z-index: 8;
+  cursor:pointer;
+}
+
+.scroll3D__cross::before, .scroll3D__cross::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  transform-origin: center center;
+}
+
+.scroll3D__cross::before {
+  transform: rotate(45deg);
+}
+
+.scroll3D__cross::after {
+  transform: rotate(-45deg);
+}
+
+.scroll3D__cross:hover{
+  opacity: .5;
+}

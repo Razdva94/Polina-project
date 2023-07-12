@@ -1,0 +1,15 @@
+.header__cap{
+  margin-top: 50px;
+  display: flex;
+  gap: 37px;
+  justify-content: right;
+  width: 70vw;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 1025px){
+  .header__cap{
+    display: none;
+  }
+}

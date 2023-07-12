@@ -70,7 +70,7 @@ const poligraphPrices = [
 function Prices() {
   return (
     <div className="page__container">
-      <h2 className="prices__header">Стоимость услуг</h2>
+      <h2 className="prices__header" id="prices">Стоимость услуг</h2>
       <div className="prices__container">
         <div className="prices__block">
           <h2 className="prices__title">

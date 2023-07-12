@@ -6,7 +6,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Main from "./Main";
 import Footer from "./Footer";
-import OrderButton from "./OrderButton";
+// import OrderButton from "./OrderButton";
 import LateralInfo from "./LateralInfo";
 import Header from "./Header";
 import MareTitle from "../images/Mare/MareTitle.jpg";
@@ -63,7 +63,7 @@ function App() {
                       />
                       <Main />
                       <Footer />
-                      <OrderButton />
+                      {/* <OrderButton /> */}
                       <LoresiProject />
                       <MareProject />
                       <TeaProject />

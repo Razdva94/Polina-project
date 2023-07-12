@@ -1,7 +1,6 @@
 .header__text{
-  position: absolute;
-  top: 20vh;
-  left: 20vh;
-  color: white;
+  color: rgb(255, 255, 255);
   z-index: 7;
+  margin: 0;
 }
+

@@ -18,11 +18,11 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer__container">
-        <div className="footer__text-container">
-          <p className="footer__text" onClick={goToAboutME}>Обо мне</p>
-          <p className="footer__text" onClick={goToPrices}>Цены</p>
-          <p className="footer__text" onClick={goToMakeAnOrder}>Оформить заказ</p>
-        </div>
+        <nav className="footer__text-container">
+          <a className="footer__text" href="#about-me" onClick={goToAboutME}>Обо мне</a>
+          <a className="footer__text" href="#prices" onClick={goToPrices}>Цены</a>
+          <a className="footer__text" href="#make-an-order" onClick={goToMakeAnOrder}>Оформить заказ</a>
+        </nav>
         <div className="footer__text-container">
           <a
             href="https://t.me/polinam_design"

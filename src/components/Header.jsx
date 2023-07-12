@@ -1,5 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useNavigate } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -10,6 +11,7 @@ import "../blocks/header/header__swiper-styles.css";
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 export default function Header({ images }) {
+  const navigate = useNavigate();
   const [isWideScreen, setIsWideScreen] = React.useState(false);
   const slides = [
     {
@@ -46,35 +48,64 @@ export default function Header({ images }) {
     };
   }, []);
 
+  function goToAbouMe(){
+    navigate("/about-me");
+  }
+  function goToMakeAnOrder(){
+    navigate("/make-an-order");
+  }
+  function goToPrices(){
+    navigate("/prices");
+  }
   return (
-    <Swiper
-      spaceBetween={0}
-      centeredSlides={true}
-      allowTouchMove={false}
-      navigation={false}
-      loop={true}
-      speed={700}
-      slidesPerView={1}
-      autoplay={{
-        delay: 4000,
-        disableOnInteraction: false,
-      }}
-      style={{
-        paddingBottom: "100px",
-        backgroundColor: "rgb(7,7,7)",
-      }}
-      modules={[Autoplay, Pagination, Navigation]}
-      className="mySwiper"
-    >
-      {slides.map((slide) => (
-        <SwiperSlide key={slide.id}>
-          <img
-            src={isWideScreen ? slide.image : slide.mobileImage}
-            alt={slide.alt}
-            style={{ objectFit: "contain" }}
-          />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <>
+      <div className="header">
+        <nav className="header__cap">
+          <a href="#portfolio" className="header__nav">Портфолио</a>
+          <a href="#about-me" id="main" className="header__nav" onClick={goToAbouMe}>обо мне</a>
+          <a href="make-an-order" onClick={goToMakeAnOrder} className="header__nav">Оформить заказ</a>
+          <a href="prices" onClick={goToPrices} className="header__nav">Прайс</a>
+        </nav>
+        <h1 className="header__text header__text_type_name">
+          Маишева Полина
+        </h1>
+        <h2
+          className="header__text header__text_type_profession"
+        >
+          Графический дизайнер
+        </h2>
+      </div>
+      <div className="swiper-container">
+        <div className="swiper-wrapper">
+          <div className="swiper-slide">
+            <Swiper
+              spaceBetween={0}
+              centeredSlides={true}
+              allowTouchMove={false}
+              navigation={false}
+              loop={true}
+              speed={700}
+              slidesPerView={1}
+              autoplay={{
+                delay: 7000,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay, Pagination, Navigation]}
+              className="mySwiper"
+            >
+              {slides.map((slide) => (
+                <SwiperSlide key={slide.id}>
+                  <img
+                    src={isWideScreen ? slide.image : slide.mobileImage}
+                    alt={slide.alt}
+                    style={{ objectFit: "contain", opacity: "1" }}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

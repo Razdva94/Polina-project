@@ -20,12 +20,12 @@ function HorizontalSlide() {
   return (
     <div className="horizontal-slide">
       <nav className="horizontal-slide__navigation">
-        <a className="horizontal-slide__text" onClick={goToPortfolio}>
-          ПОРТФОЛИО
+        <a href="#main" className="horizontal-slide__text" onClick={goToPortfolio}>
+          ГЛАВНАЯ
         </a>
-        <a className="horizontal-slide__text" onClick={goToPrices}>ЦЕНЫ</a>
-        <a className="horizontal-slide__text" onClick={goToAboutMe}>ОБО МНЕ</a>
-        <a className="horizontal-slide__text" onClick={goToOrder}>
+        <a href="#prices" className="horizontal-slide__text" onClick={goToPrices}>ЦЕНЫ</a>
+        <a href="about-me" className="horizontal-slide__text" onClick={goToAboutMe}>ОБО МНЕ</a>
+        <a href="make-an-order" className="horizontal-slide__text" onClick={goToOrder}>
           ОСТАВИТЬ ЗАЯВКУ
         </a>
       </nav>

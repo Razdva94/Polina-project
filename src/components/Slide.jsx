@@ -109,7 +109,7 @@ function Slide() {
 
   function handleClickOutside(event) {
     if (
-      !slideRef.current.contains(event.target) &&
+      !slideRef.current?.contains(event.target) &&
       event.target.className !== "lateral-info__button"
     ) {
       dispatch(closeSlide());
@@ -132,47 +132,51 @@ function Slide() {
   }, []);
 
   return (
-    <div
+    <nav
       ref={slideRef}
       className={`${startAnimation && "slide"} ${
         isOpened ? "slide_opened" : "slide_closed"
       }`}
     >
-      <h2
+      <a
         onClick={handleNavigateMain}
         className={`${textAppearDelay.portfolio && "slide"} ${
           !textAppearDelay.portfolio && "slide__text"
         } slide__text_type_animated`}
+        href="#main"
       >
-        ПОРТФОЛИО
-      </h2>
-      <h2
+        <h2 style={{ margin: 0 }}>ГЛАВНАЯ</h2>
+      </a>
+      <a
         onClick={handleNavigatePrices}
         className={`${textAppearDelay.price && "slide"} ${
           !textAppearDelay.price && "slide__text"
         } slide__text_type_animated`}
+        href="#prices"
       >
-        ЦЕНЫ
-      </h2>
-      <h2
+        <h2 style={{ margin: 0 }}>ЦЕНЫ</h2>
+      </a>
+      <a
         onClick={handleNavigateAboutMe}
         className={`${textAppearDelay.aboutMe && "slide"} ${
           !textAppearDelay.aboutMe && "slide__text"
         } slide__text_type_animated`}
+        href="#about-me"
       >
-        ОБО МНЕ
-      </h2>
+        <h2 style={{ margin: 0 }}>ОБО МНЕ</h2>
+      </a>
       {isWideScreen && (
-        <h2
+        <a
           onClick={handleNavigateOrder}
           className={`${textAppearDelay.order && "slide"} ${
             !textAppearDelay.order && "slide__text"
           } slide__text_type_animated`}
+          href="#make-an-order"
         >
-          СДЕЛАТЬ ЗАКАЗ
-        </h2>
+          <h2 style={{ margin: 0 }}>СДЕЛАТЬ ЗАКАЗ</h2>
+        </a>
       )}
-    </div>
+    </nav>
   );
 }
 

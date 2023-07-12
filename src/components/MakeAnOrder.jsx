@@ -80,7 +80,7 @@ function MakeAnOrder() {
     >
       <div className="order">
         <form className="form" onSubmit={deliverMessage}>
-          <h2 className="form__title">Оформить заказ</h2>
+          <h2 className="form__title" id="make-an-order">Оформить заказ</h2>
           <input
             type="text"
             minLength="2"

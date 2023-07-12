@@ -37,9 +37,11 @@ function LateralInfo() {
   return (
     <>
       <div className="lateral-info">
-        <div className="lateral-info__text" onClick={navigatetoMain}>
-          Maisheva Polina
-        </div>
+        <a style={{ textDecoration: "none" }} href="#main">
+          <div className="lateral-info__text" onClick={navigatetoMain}>
+            Maisheva Polina
+          </div>
+        </a>
         <button
           type="button"
           className="lateral-info__button"
