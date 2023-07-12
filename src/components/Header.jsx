@@ -87,7 +87,7 @@ export default function Header({ images }) {
               speed={700}
               slidesPerView={1}
               autoplay={{
-                delay: 7000,
+                delay: 5000,
                 disableOnInteraction: false,
               }}
               modules={[Autoplay, Pagination, Navigation]}

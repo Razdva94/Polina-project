@@ -3,7 +3,7 @@
   height: 5vh;
   width: 100vw;
   background-color: black;
-  z-index: 7;
+  z-index: 15;
   animation: horizontal-slide-animation .3s forwards;
 }
 

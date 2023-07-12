@@ -6,4 +6,9 @@
   text-transform: uppercase;
   color: white;
   text-decoration: none;
+  transition: opacity .8s;
+}
+
+.header__nav:hover{
+  opacity: .5;
 }

@@ -5,6 +5,7 @@
   animation: horizontal-text-animation 1.5s forwards;
   animation-delay: 0.3s;
   cursor: pointer;
+  text-decoration: none;
 }
 
 @keyframes horizontal-text-animation {
