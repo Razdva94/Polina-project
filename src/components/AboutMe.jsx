@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "./Footer";
-import Polina from "../images/Polinochka.jpg";
+import Polina from "../images/Polinochka_35_11zon.webp";
 
 function AboutMe() {
   return (

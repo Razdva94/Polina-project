@@ -1,14 +1,14 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import ProjectPictures from "./ProjectPictures";
-import mareSlide1 from "../images/Mare/mareSlide1.jpg";
-import mareSlide2 from "../images/Mare/mareSlide2.jpg";
-import mareSlide3 from "../images/Mare/mareSlide3.jpg";
-import mareSlide4 from "../images/Mare/mareSlide4.jpg";
-import mareSlide5 from "../images/Mare/mareSlide5.jpg";
-import mareSlide6 from "../images/Mare/mareSlide6.jpg";
-import mareSlide7 from "../images/Mare/mareSlide7.jpg";
-import MareMobileTitle from "../images/Mare/MareMobileTitle.jpg";
+import mareSlide1 from "../images/Mare/mareSlide1_19_11zon.webp";
+import mareSlide2 from "../images/Mare/mareSlide2_20_11zon.webp";
+import mareSlide3 from "../images/Mare/mareSlide3_21_11zon.webp";
+import mareSlide4 from "../images/Mare/mareSlide4_22_11zon.webp";
+import mareSlide5 from "../images/Mare/mareSlide5_23_11zon.webp";
+import mareSlide6 from "../images/Mare/mareSlide6_24_11zon.webp";
+import mareSlide7 from "../images/Mare/mareSlide7_14_11zon.webp";
+import MareMobileTitle from "../images/Mare/MareMobileTitle_16_11zon.webp";
 
 function MareProject() {
   const typeOfProject = useSelector((state) => state.portfolio.portfolio.type);

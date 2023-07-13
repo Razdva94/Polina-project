@@ -6,15 +6,14 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Main from "./Main";
 import Footer from "./Footer";
-// import OrderButton from "./OrderButton";
 import LateralInfo from "./LateralInfo";
 import Header from "./Header";
-import MareTitle from "../images/Mare/MareTitle.jpg";
-import LoresiTitle from "../images/Loresi/LoresiTitle.jpg";
-import TeaTitle from "../images/Tea/TeaTitle.jpg";
-import MareMobileTitle from "../images/Mare/MareMobileTitle.jpg";
-import TeaMobileTitle from "../images/Tea/TeaMobileTitle.jpg";
-import LoresiMobileTitle from "../images/Loresi/LoresiMobileTitle.jpg";
+import MareTitle from "../images/Mare/MareTitle_15_11zon.webp";
+import LoresiTitle from "../images/Loresi/LoresiTitle_2_11zon.webp";
+import TeaTitle from "../images/Tea/TeaTitle_27_11zon.webp";
+import MareMobileTitle from "../images/Mare/MareMobileTitle_16_11zon.webp";
+import TeaMobileTitle from "../images/Tea/TeaMobileTitle_28_11zon.webp";
+import LoresiMobileTitle from "../images/Loresi/LoresiMobileTitle.webp";
 import ImagePreloader from "./ImagePreloader";
 import Preloader from "./Preloader";
 
@@ -63,7 +62,6 @@ function App() {
                       />
                       <Main />
                       <Footer />
-                      {/* <OrderButton /> */}
                       <LoresiProject />
                       <MareProject />
                       <TeaProject />

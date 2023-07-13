@@ -1,12 +1,12 @@
 import React from "react";
 import Scroll3D from "./Scroll3D";
-import TeaMobileTitle from "../images/Tea/TeaMobileTitle.jpg";
-import teaSlide2 from "../images/Tea/TeaSlide2.jpg";
-import teaSlide3 from "../images/Tea/teaSlide3.jpg";
-import teaSlide4 from "../images/Tea/teaSlide4.jpg";
-import teaSlide5 from "../images/Tea/teaSlide5.jpg";
-import teaSlide6 from "../images/Tea/teaSlide6.jpg";
-import teaSlide7 from "../images/Tea/teaSlide7.jpg";
+import TeaMobileTitle from "../images/Tea/TeaMobileTitle_28_11zon.webp";
+import teaSlide2 from "../images/Tea/TeaSlide2_31_11zon.webp";
+import teaSlide3 from "../images/Tea/teaSlide3_32_11zon.webp";
+import teaSlide4 from "../images/Tea/teaSlide4_33_11zon.webp";
+import teaSlide5 from "../images/Tea/teaSlide5_34_11zon.webp";
+import teaSlide6 from "../images/Tea/teaSlide6_25_11zon.webp";
+import teaSlide7 from "../images/Tea/teaSlide7_26_11zon.webp";
 import teaSlide0 from "../images/Tea/teaSlide0.png";
 
 function Tea3D() {

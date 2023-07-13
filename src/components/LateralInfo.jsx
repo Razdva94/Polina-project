@@ -8,6 +8,9 @@ import { defineDisplayWithSlide } from "../store/mobileSlideSlice";
 import instagram from "../images/i.webp";
 import Slide from "./Slide";
 import HorizontalSlide from "./HorizontalSlide";
+import Behance from "../images/Behance.jpg";
+import Whatsapp from "../images/Whatsapp.jpg";
+import Telegramm from "../images/Telegramm.jpg";
 
 function LateralInfo() {
   const navigate = useNavigate();
@@ -91,7 +94,7 @@ function LateralInfo() {
           >
             <img
               className="footer__icon"
-              src="https://static.tildacdn.com/tild3839-3138-4438-a236-393266363134/Telegram.svg"
+              src={Telegramm}
               alt="Telegram"
             />
           </a>
@@ -102,14 +105,14 @@ function LateralInfo() {
           >
             <img
               className="footer__icon"
-              src="https://static.tildacdn.com/tild3762-3435-4265-a332-346633363037/behance.svg"
+              src={Behance}
               alt="Behance"
             />
           </a>
           <a href="https://wa.me/+79819412392" target="_blank" rel="noreferrer">
             <img
               className="footer__icon"
-              src="https://static.tildacdn.com/tild6339-6532-4134-a334-393163396338/WhatsApp.svg"
+              src={Whatsapp}
               alt="Whatsapp"
             />
           </a>

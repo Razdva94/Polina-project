@@ -2,9 +2,9 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { isMobile, isTablet } from "react-device-detect";
-import MarePortfolioTItle from "../images/Mare/MarePortfolioTitle.jpg";
-import TeaPortfolioTitle from "../images/Tea/TeaPortfolioTitle.jpg";
-import LoresiPortfolioTile from "../images/Loresi/LoresiPortfolioTitle.jpg";
+import MarePortfolioTItle from "../images/Mare/MarePortfolioTitle_17_11zon.webp";
+import TeaPortfolioTitle from "../images/Tea/TeaPortfolioTitle_29_11zon.webp";
+import LoresiPortfolioTitle from "../images/Loresi/LoresiPortfolioTitle.webp";
 import { openPortfolioPictures } from "../store/portfolioSlice";
 
 export default function Main() {
@@ -45,7 +45,7 @@ export default function Main() {
         />
         <img
           className="portfolio__image"
-          src={LoresiPortfolioTile}
+          src={LoresiPortfolioTitle}
           alt="Loresi"
           onClick={handleOpenPictures}
         />
