@@ -1,7 +1,8 @@
 .header__text_type_profession{
   font-size: 30px;
-  font-family: "ProstoOne";
-  margin-top: 25px;
+  font-family: "CenturyGothic";
+  margin-top: 15px;
+  font-weight: 100;
 }
 
 @media screen and (max-width: 500px){

@@ -67,7 +67,7 @@ export default function Header({ images }) {
           <a href="prices" onClick={goToPrices} className="header__nav">Прайс</a>
         </nav>
         <h1 className="header__text header__text_type_name">
-          Маишева Полина
+          Maisheva Polina
         </h1>
         <h2
           className="header__text header__text_type_profession"
