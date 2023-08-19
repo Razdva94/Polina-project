@@ -64,7 +64,7 @@ export default function Header({ images }) {
           <a href="#portfolio" className="header__nav">Портфолио</a>
           <a href="#about-me" id="main" className="header__nav" onClick={goToAbouMe}>обо мне</a>
           <a href="make-an-order" onClick={goToMakeAnOrder} className="header__nav">Оформить заказ</a>
-          <a href="prices" onClick={goToPrices} className="header__nav">Прайс</a>
+          <a href="prices" onClick={goToPrices} className="header__nav">Стоимость услуг</a>
         </nav>
         <h1 className="header__text header__text_type_name">
           Maisheva Polina
