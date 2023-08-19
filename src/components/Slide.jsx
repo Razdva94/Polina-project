@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleSlide, closeSlide } from "../store/slideSlice";
@@ -16,19 +16,19 @@ function Slide() {
   const isOpened = useSelector((state) => state.slide.slide);
   const slideRef = useRef(null);
 
-  const [isWideScreen, setIsWideScreen] = useState(false);
+  // const [isWideScreen, setIsWideScreen] = useState(false);
 
-  useEffect(() => {
-    function handleResize() {
-      setIsWideScreen(window.innerWidth <= 1024);
-    }
-    handleResize();
-    window.addEventListener("resize", handleResize);
+  // useEffect(() => {
+  //   function handleResize() {
+  //     setIsWideScreen(window.innerWidth <= 1024);
+  //   }
+  //   handleResize();
+  //   window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
 
   useEffect(() => {
     const delay = 500;
@@ -165,17 +165,15 @@ function Slide() {
       >
         <h2 style={{ margin: 0 }}>ОБО МНЕ</h2>
       </a>
-      {isWideScreen && (
-        <a
-          onClick={handleNavigateOrder}
-          className={`${textAppearDelay.order && "slide"} ${
-            !textAppearDelay.order && "slide__text"
-          } slide__text_type_animated`}
-          href="#make-an-order"
-        >
-          <h2 style={{ margin: 0 }}>СДЕЛАТЬ ЗАКАЗ</h2>
-        </a>
-      )}
+      <a
+        onClick={handleNavigateOrder}
+        className={`${textAppearDelay.order && "slide"} ${
+          !textAppearDelay.order && "slide__text"
+        } slide__text_type_animated`}
+        href="#make-an-order"
+      >
+        <h2 style={{ margin: 0 }}>ОФОРМИТЬ ЗАКАЗ</h2>
+      </a>
     </nav>
   );
 }
