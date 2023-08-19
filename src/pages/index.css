@@ -49,6 +49,7 @@
 @import url(../blocks/footer/__text-container/footer__text-container.css);
 @import url(../blocks/footer/__icon/footer__icon.css);
 @import url(../blocks/footer/__icon/_type/footer__icon_type_instagram.css);
+@import url(../blocks/footer/__icon-container/footer__icon-container.css);
 /*scrollbar*/
 @import url(../blocks/scrollbar/scrollbar.css);
 /*project*/ 

@@ -154,7 +154,7 @@ function Slide() {
         } slide__text_type_animated`}
         href="#prices"
       >
-        <h2 style={{ margin: 0 }}>ЦЕНЫ</h2>
+        <h2 style={{ margin: 0 }}>СТОИМОСТЬ УСЛУГ</h2>
       </a>
       <a
         onClick={handleNavigateAboutMe}

@@ -23,10 +23,10 @@ function Footer() {
       <div className="footer__container">
         <nav className="footer__text-container">
           <a className="footer__text" href="#about-me" onClick={goToAboutME}>Обо мне</a>
-          <a className="footer__text" href="#prices" onClick={goToPrices}>Цены</a>
+          <a className="footer__text" href="#prices" onClick={goToPrices}>Стоимость услуг</a>
           <a className="footer__text" href="#make-an-order" onClick={goToMakeAnOrder}>Оформить заказ</a>
         </nav>
-        <div className="footer__text-container">
+        <div className="footer__icon-container">
           <a
             href="https://t.me/polinam_design"
             target="_blank"

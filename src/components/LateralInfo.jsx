@@ -7,10 +7,11 @@ import { toggleSlide, closeSlide } from "../store/slideSlice";
 import { defineDisplayWithSlide } from "../store/mobileSlideSlice";
 import instagram from "../images/i.webp";
 import Slide from "./Slide";
-import HorizontalSlide from "./HorizontalSlide";
+// import HorizontalSlide from "./HorizontalSlide";
 import Behance from "../images/Behance.jpg";
 import Whatsapp from "../images/Whatsapp.jpg";
 import Telegramm from "../images/Telegramm.jpg";
+import LateralSlide from "./LateralSlide/LateralSlide";
 
 function LateralInfo() {
   const navigate = useNavigate();
@@ -130,7 +131,7 @@ function LateralInfo() {
         </div>
       </div>
       {!displayWithState && <Slide />}
-      {displayWithState && slideState && <HorizontalSlide />}
+      {displayWithState && slideState && <LateralSlide />}
     </>
   );
 }

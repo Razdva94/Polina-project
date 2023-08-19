@@ -1,4 +1,4 @@
-.footer__text-container{
+.footer__icon-container{
   display: flex;
   gap: 30px;
   font-size: 15px;
@@ -6,9 +6,7 @@
 }
 
 @media screen and (max-width: 450px) {
-  .footer__text-container{
+.footer__icon-container{
     margin-top: 20px;
-    flex-direction: column;
-    text-align: center;
   }
 }

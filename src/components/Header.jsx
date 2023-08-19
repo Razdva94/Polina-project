@@ -36,7 +36,7 @@ export default function Header({ images }) {
 
   React.useEffect(() => {
     function handleResize() {
-      setIsWideScreen(window.innerWidth >= 550);
+      setIsWideScreen(window.innerWidth >= 551);
     }
     startTransition(() => {
       handleResize();
