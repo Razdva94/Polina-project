@@ -16,20 +16,6 @@ function Slide() {
   const isOpened = useSelector((state) => state.slide.slide);
   const slideRef = useRef(null);
 
-  // const [isWideScreen, setIsWideScreen] = useState(false);
-
-  // useEffect(() => {
-  //   function handleResize() {
-  //     setIsWideScreen(window.innerWidth <= 1024);
-  //   }
-  //   handleResize();
-  //   window.addEventListener("resize", handleResize);
-
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
-
   useEffect(() => {
     const delay = 500;
     const timeoutId = setTimeout(() => {

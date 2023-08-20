@@ -70,7 +70,7 @@ function LateralSlide() {
           }`}
           onClick={onNavigateMakeAnOrder}
         >
-          Сделать заказ
+          Оформить заказ
         </p>
       </nav>
     </div>
