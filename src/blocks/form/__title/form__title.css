@@ -1,6 +1,36 @@
-.form__title{
+.form__subtitle{
   font-size: 25px;
   margin-bottom: 35px;
   font-family: "ProstoOne";
   font-weight: 100;
+  margin-top: 10px;
+}
+
+
+.form__title{
+  font-family: "CenturyGothic" ;
+  text-align: center;
+  font-size: 17px;
+  margin-top: 70px;
+  border-top: 1px solid rgb(142, 137, 137);
+  border-bottom: 1px solid rgb(142, 137, 137);
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: rgb(142, 137, 137);
+  margin-bottom: 70px;
+  font-weight: 100;
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
+
+@media screen and (max-width: 1200px) {
+  .form__title{
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+}
+@media screen and (max-width: 1025px) {
+.form__title{
+  margin-top: 90px;
+  }
 }

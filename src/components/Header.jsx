@@ -48,31 +48,44 @@ export default function Header({ images }) {
     };
   }, []);
 
-  function goToAbouMe(){
+  function goToAbouMe() {
     navigate("/about-me");
   }
-  function goToMakeAnOrder(){
+  function goToMakeAnOrder() {
     navigate("/make-an-order");
   }
-  function goToPrices(){
+  function goToPrices() {
     navigate("/prices");
   }
   return (
     <>
       <div className="header">
         <nav className="header__cap">
-          <a href="#portfolio" className="header__nav">Портфолио</a>
-          <a href="#about-me" id="main" className="header__nav" onClick={goToAbouMe}>обо мне</a>
-          <a href="make-an-order" onClick={goToMakeAnOrder} className="header__nav">Оформить заказ</a>
-          <a href="prices" onClick={goToPrices} className="header__nav">Стоимость услуг</a>
+          <a
+            href="#about-me"
+            id="main"
+            className="header__nav"
+            onClick={goToAbouMe}
+          >
+            обо мне
+          </a>
+          <a href="#portfolio" className="header__nav">
+            Портфолио
+          </a>
+          <a href="prices" onClick={goToPrices} className="header__nav">
+            Стоимость услуг
+          </a>
+          <a
+            href="make-an-order"
+            onClick={goToMakeAnOrder}
+            className="header__nav"
+          >
+            Оформить заказ
+          </a>
         </nav>
-        <h1 className="header__text header__text_type_name">
-          Maisheva Polina
-        </h1>
-        <h2
-          className="header__text header__text_type_profession"
-        >
-          Графический дизайнер
+        <h1 className="header__text header__text_type_name">Maisheva Polina</h1>
+        <h2 className="header__text header__text_type_profession">
+          Бренд-дизайнер
         </h2>
       </div>
       <div className="swiper-container">

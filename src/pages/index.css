@@ -33,7 +33,6 @@
 @import url(../blocks/slide/slide.css);
 @import url(../blocks/slide/__text/_type/slide__text_type_animated.css);
 /*form*/
-@import url(../blocks/form/__title/form__title.css);
 @import url(../blocks/form/__input/form__input.css);
 @import url(../blocks/form/form.css);
 @import url(../blocks/form/__select/form__select.css);
@@ -41,8 +40,11 @@
 @import url(../blocks/form/__text/_type/form__text_type_selected.css);
 @import url(../blocks/form/__input/_type/form__input_type_textarea.css);
 @import url(../blocks/form/__button/form__button.css);
+@import url(../blocks/form/__subtitle/form__subtitle.css);
 /*order*/
 @import url(../blocks/order/order.css);
+@import url(../blocks/order/__header/order__header.css);
+@import url(../blocks/order/__container/order__container.css);
 /*footer*/
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__text/footer__text.css);
@@ -72,6 +74,7 @@
 @import url(../blocks/horizontal-slide/__text/horizontal-slide__text.css);
 @import url(../blocks/horizontal-slide/__navigation/horizontal-slide__navigation.css);
 /*prices*/
+@import url(../blocks/prices/prices.css);
 @import url(../blocks/prices/__title/prices__title.css);
 @import url(../blocks/prices/__header/prices__header.css);
 @import url(../blocks/prices/__container/prices__container.css);

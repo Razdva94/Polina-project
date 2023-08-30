@@ -4,3 +4,9 @@
   margin-right: 20px;
   margin-bottom: 30px;
 }
+
+@media screen and (max-width: 900px) {
+  .form {
+    width: 100%
+  }
+}

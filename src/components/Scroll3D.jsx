@@ -5,24 +5,25 @@ import { useNavigate } from "react-router-dom";
 function Scroll3D({ frames }) {
   const navigate = useNavigate();
   const [transforms, setTransforms] = useState([]);
-  const [top, setTop] = useState(-1500);
+  const [top, setTop] = useState(-1500); // top - текущая вертикальная позиция,
+  // с учетом прокрутки, с помощью нее задаем ограничения и трансформируем скролл по Y в Z
   const [opacities, setOpacities] = useState([1, 1, 1]);
   const [delta, setDelta] = useState(0);
-  const zSpacing = -7000;
+  const zSpacing = -7000; // zSpacing - расстояние между кадрами на оси
 
-  useEffect(() => {
+  useEffect(() => { // Этот хук служит для преобразования скролла по оси Y в трансформацию галереи по оси Z;
     function handleScroll(event) {
-      const lastPos = zSpacing / 5;
-      setTop((prevTop) => prevTop + event.deltaY * 2);
-      const newDelta = lastPos - (top + event.deltaY);
+      // initPos - изначальное позиционирование элементов, влияет на диапозон прокрутки
+      const initPos = zSpacing / 5;
+      setTop((prevTop) => prevTop + event.deltaY * 2); // задаем скорость прокрутки
+      const newDelta = initPos - (top + event.deltaY); // преобразуем вертикальное движение по оси Y, в движение по оси Z
       setDelta(newDelta);
-      if (top > 2400) {
+      if (top > 2400) { // задаем ограничения по скроллу, чтобы галерея не уходила в бесконечность
         setTop(2400);
       }
-      if (top < -1500){
+      if (top < -1500) {
         setTop(-1500);
       }
-      console.log(top);
     }
 
     window.addEventListener("wheel", handleScroll);
@@ -37,13 +38,15 @@ function Scroll3D({ frames }) {
 
     // eslint-disable-next-line no-plusplus
     for (let i = 0; i < frames.length; i++) {
-      let zVal = i * zSpacing + zSpacing;
-      zVal += delta * -15.5;
-      const transform = `translateZ(${zVal * 0.9}px)`;
-      newTransforms.push(transform);
+      let zVal = i * zSpacing + zSpacing; // zVal, этой переменной определяем изначальное положение каждого элемента frames (его глубину)
+      zVal += delta * -15.5; // изменение zVal при прокрутке
+      const transform = `translateZ(${zVal * 0.9}px)`; // переменная для новых значений карточки
+      newTransforms.push(transform); // Каждый элемент массива соответсвует карточке по индексу,
+      // таким образом отслеживаем изменение каждой карточки при скролле и добавляем
 
       const opacity = 1 - zVal / (Math.abs(zSpacing) * 1.5);
-      let clampedOpacity = opacity > 1.7 ? opacity : 0;
+      let clampedOpacity = opacity > 1.7 ? opacity : 0; // настройка исчезания карточки, при определенном значении прокрутки,
+      // карточка должна счесзать, чтобы не закрывать остальные карточки
       if (i === 0) {
         clampedOpacity = opacity > 1.5 ? opacity : 0;
       }

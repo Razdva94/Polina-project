@@ -47,6 +47,16 @@ function LateralSlide() {
         </a>
         <a
           className={`lateral-slide__text lateral-slide__text_margin ${
+            location.pathname === "/about-me" &&
+            "lateral-slide__text_active"
+          }`}
+          onClick={onNavigateAboutMe}
+          href="#about-me"
+        >
+          Обо мне
+        </a>
+        <a
+          className={`lateral-slide__text lateral-slide__text_margin ${
             location.pathname === "/prices" && "lateral-slide__text_active"
           }`}
           onClick={onNavigatePrices}
@@ -54,24 +64,16 @@ function LateralSlide() {
         >
           Cтоимость услуг
         </a>
-        <p
-          className={`lateral-slide__text lateral-slide__text_margin ${
-            location.pathname === "/about-me" &&
-            "lateral-slide__text_active"
-          }`}
-          onClick={onNavigateAboutMe}
-        >
-          Обо мне
-        </p>
-        <p
+        <a
           className={`lateral-slide__text lateral-slide__text_margin ${
             location.pathname === "/make-an-order" &&
             "lateral-slide__text_active"
           }`}
           onClick={onNavigateMakeAnOrder}
+          href="#make-an-order"
         >
           Оформить заказ
-        </p>
+        </a>
       </nav>
     </div>
   );

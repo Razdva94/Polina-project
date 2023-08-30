@@ -6,11 +6,11 @@ import api from "../utils/api";
 import Popup from "./Popup";
 
 const options = [
-  { value: "1", label: "01 | Логотип" },
-  { value: "2", label: "02 | Логотип" },
+  { value: "1", label: "01 | Логотип Lite" },
+  { value: "2", label: "02 | Логотип Standart" },
   { value: "3", label: "Фирменный стиль" },
   { value: "4", label: "Полиграфия" },
-  { value: "5", label: "Оформление Инстаграмма" },
+  { value: "5", label: "Оформление Инстаграма" },
   { value: "6", label: "Другое" },
 ];
 
@@ -79,89 +79,98 @@ function MakeAnOrder() {
       transition={{ duration: 0.7 }}
     >
       <div className="order">
-        <form className="form" onSubmit={deliverMessage}>
-          <h2 className="form__title" id="make-an-order">Оформить заказ</h2>
-          <input
-            type="text"
-            minLength="2"
-            maxLength="30"
-            className="form__input"
-            placeholder="Ваше имя"
-            required
-            name="user"
-          />
-          <input
-            type="email"
-            minLength="2"
-            maxLength="30"
-            className="form__input"
-            placeholder="E-mail"
-            required
-            name="email"
-          />
-          <Select
-            theme={(theme) => ({
-              ...theme,
-              borderRadius: 2,
-              colors: {
-                ...theme.colors,
-                primary25: "grey",
-                primary: "black",
-              },
-            })}
-            className="form__select"
-            required
-            options={options}
-            placeholder="Выберите услугу"
-            styles={customStyles}
-            name="select"
-            onChange={handleSelectChange}
-            value={selectedOption}
-          />
-          <textarea
-            name="text"
-            className="form__input form__input_type_textarea"
-            placeholder="Ваше сообщение"
-          />
-          <button type="submit" className="form__button">
-            {loading ? "Отправление..." : "Отправить"}
-          </button>
-        </form>
-        <div className="contacts">
-          <h2 className="form__title">Связь со мной</h2>
-          <a
-            href="https://wa.me/+79819412392"
-            target="_blank"
-            rel="noreferrer"
-            className="form__text"
-          >
-            +TELEGRAM
-          </a>
-          <a
-            className="form__text"
-            href="https://wa.me/+79819412392"
-            target="_blank"
-            rel="noreferrer"
-          >
-            +WHATSAPP
-          </a>
-          <a
-            className="form__text"
-            href="https://www.instagram.com/polinam_design/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            +INSTAGRAM
-          </a>
-          <a
-            className="form__text"
-            href="https://www.behance.net/polinaadesign"
-            target="_blank"
-            rel="noreferrer"
-          >
-            +BEHANCE
-          </a>
-          <p className="form__text">MAISHEVA.POLINA@MAIL.RU</p>
+        <h2
+          className="order__header"
+          id="make-an-order"
+        >
+          Оформить заказ
+        </h2>
+        <div
+          className="order__container"
+        >
+          <form className="form" onSubmit={deliverMessage}>
+            <input
+              type="text"
+              minLength="2"
+              maxLength="30"
+              className="form__input"
+              placeholder="Ваше имя"
+              required
+              name="user"
+            />
+            <input
+              type="email"
+              minLength="2"
+              maxLength="30"
+              className="form__input"
+              placeholder="E-mail"
+              required
+              name="email"
+            />
+            <Select
+              theme={(theme) => ({
+                ...theme,
+                borderRadius: 2,
+                colors: {
+                  ...theme.colors,
+                  primary25: "grey",
+                  primary: "black",
+                },
+              })}
+              className="form__select"
+              required
+              options={options}
+              placeholder="Выберите услугу"
+              styles={customStyles}
+              name="select"
+              onChange={handleSelectChange}
+              value={selectedOption}
+            />
+            <textarea
+              name="text"
+              className="form__input form__input_type_textarea"
+              placeholder="Ваше сообщение"
+            />
+            <button type="submit" className="form__button">
+              {loading ? "Отправление..." : "Отправить"}
+            </button>
+          </form>
+          <div className="contacts">
+            <h2 className="form__subtitle">Связь со мной</h2>
+            <a
+              href="https://wa.me/+79819412392"
+              target="_blank"
+              rel="noreferrer"
+              className="form__text"
+            >
+              +TELEGRAM
+            </a>
+            <a
+              className="form__text"
+              href="https://wa.me/+79819412392"
+              target="_blank"
+              rel="noreferrer"
+            >
+              +WHATSAPP
+            </a>
+            <a
+              className="form__text"
+              href="https://www.instagram.com/polinam_design/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              +INSTAGRAM
+            </a>
+            <a
+              className="form__text"
+              href="https://www.behance.net/polinaadesign"
+              target="_blank"
+              rel="noreferrer"
+            >
+              +BEHANCE
+            </a>
+            <p className="form__text">MAISHEVA.POLINA@MAIL.RU</p>
+          </div>
         </div>
         <div className="animation"></div>
       </div>

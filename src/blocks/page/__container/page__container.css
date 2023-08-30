@@ -1,6 +1,7 @@
 .page__container {
+  margin-top: 0;
   width: 95vw;
-  background-color: #f8f5f5;
+  background-color: #EDECE8;
   margin-left: 5vw;
 }
 

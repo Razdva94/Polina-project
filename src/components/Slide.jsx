@@ -28,8 +28,8 @@ function Slide() {
   useEffect(() => {
     if (isOpened) {
       const delay1 = 500;
-      const delay2 = 1000;
-      const delay3 = 1500;
+      const delay2 = 1500;
+      const delay3 = 1000;
       const delay4 = 2000;
 
       const timeoutId1 = setTimeout(() => {
@@ -131,16 +131,7 @@ function Slide() {
         } slide__text_type_animated`}
         href="#main"
       >
-        <h2 style={{ margin: 0 }}>ГЛАВНАЯ</h2>
-      </a>
-      <a
-        onClick={handleNavigatePrices}
-        className={`${textAppearDelay.price && "slide"} ${
-          !textAppearDelay.price && "slide__text"
-        } slide__text_type_animated`}
-        href="#prices"
-      >
-        <h2 style={{ margin: 0 }}>СТОИМОСТЬ УСЛУГ</h2>
+        <h2 style={{ margin: 0, all: "unset", fontSize: "20px" }}>ГЛАВНАЯ</h2>
       </a>
       <a
         onClick={handleNavigateAboutMe}
@@ -149,7 +140,16 @@ function Slide() {
         } slide__text_type_animated`}
         href="#about-me"
       >
-        <h2 style={{ margin: 0 }}>ОБО МНЕ</h2>
+        <h2 style={{ margin: 0, all: "unset", fontSize: "20px" }}>ОБО МНЕ</h2>
+      </a>
+      <a
+        onClick={handleNavigatePrices}
+        className={`${textAppearDelay.price && "slide"} ${
+          !textAppearDelay.price && "slide__text"
+        } slide__text_type_animated`}
+        href="#prices"
+      >
+        <h2 style={{ margin: 0, all: "unset", fontSize: "20px" }}>СТОИМОСТЬ УСЛУГ</h2>
       </a>
       <a
         onClick={handleNavigateOrder}
@@ -158,7 +158,7 @@ function Slide() {
         } slide__text_type_animated`}
         href="#make-an-order"
       >
-        <h2 style={{ margin: 0 }}>ОФОРМИТЬ ЗАКАЗ</h2>
+        <h2 style={{ margin: 0, all: "unset", fontSize: "20px" }}>ОФОРМИТЬ ЗАКАЗ</h2>
       </a>
     </nav>
   );

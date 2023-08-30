@@ -4,6 +4,8 @@
   animation-delay: 0.3s;
   display: flex;
   align-items: flex-end;
+  font-family: "CenturyGothic";
+  font-weight: normal;
   /* font-size: 26px; */
 }
 

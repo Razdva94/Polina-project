@@ -29,7 +29,9 @@ export default function Main() {
   }
   return (
     <section className="portfolio">
-      <h1 className="portfolio__title" id="portfolio">Портфолио</h1>
+      <h2 className="portfolio__title" id="portfolio">
+        Портфолио
+      </h2>
       <div className="portfolio__container">
         <img
           className="portfolio__image"
