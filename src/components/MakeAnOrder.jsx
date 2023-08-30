@@ -10,7 +10,7 @@ const options = [
   { value: "2", label: "02 | Логотип Standart" },
   { value: "3", label: "Фирменный стиль" },
   { value: "4", label: "Полиграфия" },
-  { value: "5", label: "Оформление Инстаграма" },
+  { value: "5", label: "Оформление Instagram" },
   { value: "6", label: "Другое" },
 ];
 
