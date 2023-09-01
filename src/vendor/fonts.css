@@ -35,17 +35,17 @@
   font-family: 'CenturyGothic';
   src: url(./fonts/CenturyGothic.woff2) format('woff2');
   font-weight: 400;
-  font-display: optional;
+  font-display: block;
 }
 @font-face {
   font-family: 'ProstoOne';
   src: url(./fonts/ProstoOne-Regular.ttf) format('truetype');
   font-weight: 400;
-  font-display: optional;
+  font-display: block;
 }
 @font-face {
   font-family: 'Italiana';
   src: url(./fonts/Italiana-Regular.woff2) format('woff2');
   font-weight: 400;
-  font-display: optional;
+  font-display: block;
 }
