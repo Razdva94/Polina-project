@@ -15,7 +15,8 @@ import MareMobileTitle from "../images/Mare/MareMobileTitle_16_11zon.webp";
 import TeaMobileTitle from "../images/Tea/TeaMobileTitle_28_11zon.webp";
 import LoresiMobileTitle from "../images/Loresi/LoresiMobileTitle.webp";
 import ImagePreloader from "./ImagePreloader";
-import Preloader from "./Preloader";
+// import Preloader from "./Preloader";
+import PreloadBackground from "./PreloadBackground/PreloadBackground";
 
 const MakeAnOrder = lazy(() => import("./MakeAnOrder"));
 const Mare3D = lazy(() => import("./Mare3D"));
@@ -79,7 +80,7 @@ function App() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8 }}
                   >
-                    <Suspense fallback={<Preloader />}>
+                    <Suspense fallback={<PreloadBackground />}>
                       <Mare3D />
                     </Suspense>
                   </motion.div>
@@ -94,7 +95,7 @@ function App() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8 }}
                   >
-                    <Suspense fallback={<Preloader />}>
+                    <Suspense fallback={<PreloadBackground />}>
                       <Tea3D />
                     </Suspense>
                   </motion.div>
@@ -109,7 +110,7 @@ function App() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8 }}
                   >
-                    <Suspense fallback={<Preloader />}>
+                    <Suspense fallback={<PreloadBackground />}>
                       <Loresi3D />
                     </Suspense>
                   </motion.div>
@@ -125,7 +126,7 @@ function App() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <Suspense fallback={<Preloader />}>
+                    <Suspense fallback={<PreloadBackground />}>
                       <LateralInfo />
                       <MakeAnOrder />
                     </Suspense>
@@ -142,7 +143,7 @@ function App() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <Suspense fallback={<Preloader />}>
+                    <Suspense fallback={<PreloadBackground />}>
                       <LateralInfo />
                       <Prices />
                     </Suspense>
@@ -159,7 +160,7 @@ function App() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <Suspense fallback={<Preloader />}>
+                    <Suspense fallback={<PreloadBackground />}>
                       <LateralInfo />
                       <AboutMe />
                     </Suspense>
