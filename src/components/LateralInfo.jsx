@@ -8,9 +8,9 @@ import { defineDisplayWithSlide } from "../store/mobileSlideSlice";
 import instagram from "../images/i.webp";
 import Slide from "./Slide";
 // import HorizontalSlide from "./HorizontalSlide";
-import Behance from "../images/Behance.jpg";
-import Whatsapp from "../images/Whatsapp.jpg";
-import Telegramm from "../images/Telegramm.jpg";
+import Behance from "../images/Behance.png";
+import Whatsapp from "../images/Whatsapp.png";
+import Telegramm from "../images/Telegramm.png";
 import LateralSlide from "./LateralSlide/LateralSlide";
 
 function LateralInfo() {
@@ -94,7 +94,7 @@ function LateralInfo() {
             rel="noreferrer"
           >
             <img
-              className="footer__icon"
+              className="footer__icon footer__icon_type_telegram"
               src={Telegramm}
               alt="Telegram"
             />
@@ -105,14 +105,14 @@ function LateralInfo() {
             rel="noreferrer"
           >
             <img
-              className="footer__icon"
+              className="footer__icon footer__icon_type_behance"
               src={Behance}
               alt="Behance"
             />
           </a>
           <a href="https://wa.me/+79819412392" target="_blank" rel="noreferrer">
             <img
-              className="footer__icon"
+              className="footer__icon footer__icon_type_watsapp"
               src={Whatsapp}
               alt="Whatsapp"
             />

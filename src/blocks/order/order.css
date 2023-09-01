@@ -3,7 +3,6 @@
   padding-bottom: 5%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 150px;
   justify-content: space-around;
 }
 @media screen and (max-width: 1076px){
@@ -16,6 +15,7 @@
     margin-left: 10px;
     gap: 0;
     justify-content: space-around;
+    margin-bottom: 50px;
   }
 }
 @media screen and (max-width: 800px){

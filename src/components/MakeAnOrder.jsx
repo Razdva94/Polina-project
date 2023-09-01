@@ -138,7 +138,7 @@ function MakeAnOrder() {
           <div className="contacts">
             <h2 className="form__subtitle">Связь со мной</h2>
             <a
-              href="https://wa.me/+79819412392"
+              href="https://t.me/polinam_design"
               target="_blank"
               rel="noreferrer"
               className="form__text"
