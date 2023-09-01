@@ -141,18 +141,12 @@ function App() {
               <Route
                 path="/about-me"
                 element={(
-                  <motion.div
-                    className=""
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5 }}
-                  >
+                  <div>
                     <Suspense fallback={<PreloadBackground />}>
                       <LateralInfo />
                       <AboutMe />
                     </Suspense>
-                  </motion.div>
+                  </div>
                 )}
               />
             </Routes>
