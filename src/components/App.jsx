@@ -119,35 +119,23 @@ function App() {
               <Route
                 path="/make-an-order"
                 element={(
-                  <motion.div
-                    className=""
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5 }}
-                  >
+                  <div>
                     <Suspense fallback={<PreloadBackground />}>
                       <LateralInfo />
                       <MakeAnOrder />
                     </Suspense>
-                  </motion.div>
+                  </div>
                 )}
               />
               <Route
                 path="/prices"
                 element={(
-                  <motion.div
-                    className=""
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5 }}
-                  >
+                  <div>
                     <Suspense fallback={<PreloadBackground />}>
                       <LateralInfo />
                       <Prices />
                     </Suspense>
-                  </motion.div>
+                  </div>
                 )}
               />
               <Route
