@@ -144,10 +144,8 @@ function App() {
             path="/make-an-order"
             element={(
               <div>
-                <Suspense fallback={<PreloadBackground />}>
-                  <LateralInfo />
-                  <MakeAnOrder />
-                </Suspense>
+                <LateralInfo />
+                <MakeAnOrder />
               </div>
               )}
           />
@@ -155,10 +153,8 @@ function App() {
             path="/prices"
             element={(
               <div>
-                <Suspense fallback={<PreloadBackground />}>
-                  <LateralInfo />
-                  <Prices />
-                </Suspense>
+                <LateralInfo />
+                <Prices />
               </div>
               )}
           />
@@ -166,10 +162,8 @@ function App() {
             path="/about-me"
             element={(
               <div>
-                <Suspense fallback={<PreloadBackground />}>
-                  <LateralInfo />
-                  <AboutMe />
-                </Suspense>
+                <LateralInfo />
+                <AboutMe />
               </div>
               )}
           />
