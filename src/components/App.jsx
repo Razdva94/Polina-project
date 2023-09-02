@@ -82,12 +82,8 @@ function App() {
               element={(
                 <>
                   <LateralInfo />
-                  <motion.div
+                  <div
                     className="page__container"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.7 }}
                   >
                     <Header images={imagesToPreloadHeader} className="header" />
                     <Main />
@@ -95,7 +91,7 @@ function App() {
                     <LoresiProject />
                     <MareProject />
                     <TeaProject />
-                  </motion.div>
+                  </div>
                 </>
               )}
             />
