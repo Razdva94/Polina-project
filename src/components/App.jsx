@@ -3,7 +3,7 @@
 /* eslint-disable react/jsx-no-undef */
 import React, { Suspense, lazy, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Main from "./Main";
 import Footer from "./Footer";
 import LateralInfo from "./LateralInfo";
@@ -44,9 +44,13 @@ function App() {
   useEffect(() => {
     async function loadFont(fontUrl) {
       try {
-        const font = new FontFace("CustomFont", `url(${fontUrl}) format('woff2')`, {
-          weight: 400,
-        });
+        const font = new FontFace(
+          "CustomFont",
+          `url(${fontUrl}) format('woff2')`,
+          {
+            weight: 400,
+          }
+        );
 
         await font.load();
         document.fonts.add(font);
@@ -57,10 +61,7 @@ function App() {
 
     async function loadFonts() {
       try {
-        await Promise.all([
-          loadFont(Italiana),
-          loadFont(CenturyGothic),
-        ]);
+        await Promise.all([loadFont(Italiana), loadFont(CenturyGothic)]);
 
         // Теперь можно установить стили для текста
         document.body.style.fontFamily = "CustomFont, sans-serif";
@@ -74,116 +75,111 @@ function App() {
   return (
     <ImagePreloader images={imagesToPreloadHeader}>
       <div>
-        <AnimatePresence>
-          <div className="page">
-            <Routes location={location} key={location.pathname}>
-              <Route
-                path="/"
-                element={(
-                  <>
-                    <LateralInfo />
-                    <motion.div
-                      className="page__container"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.7 }}
-                    >
-                      <Header
-                        images={imagesToPreloadHeader}
-                        className="header"
-                      />
-                      <Main />
-                      <Footer />
-                      <LoresiProject />
-                      <MareProject />
-                      <TeaProject />
-                    </motion.div>
-                  </>
-                )}
-              />
+        <div className="page">
+          <Routes location={location} key={location.pathname}>
+            <Route
+              path="/"
+              element={(
+                <>
+                  <LateralInfo />
+                  <motion.div
+                    className="page__container"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.7 }}
+                  >
+                    <Header images={imagesToPreloadHeader} className="header" />
+                    <Main />
+                    <Footer />
+                    <LoresiProject />
+                    <MareProject />
+                    <TeaProject />
+                  </motion.div>
+                </>
+              )}
+            />
 
-              <Route
-                path="/mare3D"
-                element={(
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.8 }}
-                  >
-                    <Suspense fallback={<PreloadBackground />}>
-                      <Mare3D />
-                    </Suspense>
-                  </motion.div>
-                )}
-              />
-              <Route
-                path="/tea3D"
-                element={(
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.8 }}
-                  >
-                    <Suspense fallback={<PreloadBackground />}>
-                      <Tea3D />
-                    </Suspense>
-                  </motion.div>
-                )}
-              />
-              <Route
-                path="/loresi3D"
-                element={(
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.8 }}
-                  >
-                    <Suspense fallback={<PreloadBackground />}>
-                      <Loresi3D />
-                    </Suspense>
-                  </motion.div>
-                )}
-              />
-              <Route
-                path="/make-an-order"
-                element={(
-                  <div>
-                    <Suspense fallback={<PreloadBackground />}>
-                      <LateralInfo />
-                      <MakeAnOrder />
-                    </Suspense>
-                  </div>
-                )}
-              />
-              <Route
-                path="/prices"
-                element={(
-                  <div>
-                    <Suspense fallback={<PreloadBackground />}>
-                      <LateralInfo />
-                      <Prices />
-                    </Suspense>
-                  </div>
-                )}
-              />
-              <Route
-                path="/about-me"
-                element={(
-                  <div>
-                    <Suspense fallback={<PreloadBackground />}>
-                      <LateralInfo />
-                      <AboutMe />
-                    </Suspense>
-                  </div>
-                )}
-              />
-            </Routes>
-          </div>
-        </AnimatePresence>
+            <Route
+              path="/mare3D"
+              element={(
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <Suspense fallback={<PreloadBackground />}>
+                    <Mare3D />
+                  </Suspense>
+                </motion.div>
+              )}
+            />
+            <Route
+              path="/tea3D"
+              element={(
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <Suspense fallback={<PreloadBackground />}>
+                    <Tea3D />
+                  </Suspense>
+                </motion.div>
+              )}
+            />
+            <Route
+              path="/loresi3D"
+              element={(
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <Suspense fallback={<PreloadBackground />}>
+                    <Loresi3D />
+                  </Suspense>
+                </motion.div>
+              )}
+            />
+            <Route
+              path="/make-an-order"
+              element={(
+                <div>
+                  <Suspense fallback={<PreloadBackground />}>
+                    <LateralInfo />
+                    <MakeAnOrder />
+                  </Suspense>
+                </div>
+              )}
+            />
+            <Route
+              path="/prices"
+              element={(
+                <div>
+                  <Suspense fallback={<PreloadBackground />}>
+                    <LateralInfo />
+                    <Prices />
+                  </Suspense>
+                </div>
+              )}
+            />
+            <Route
+              path="/about-me"
+              element={(
+                <div>
+                  <Suspense fallback={<PreloadBackground />}>
+                    <LateralInfo />
+                    <AboutMe />
+                  </Suspense>
+                </div>
+              )}
+            />
+          </Routes>
+        </div>
       </div>
     </ImagePreloader>
   );
