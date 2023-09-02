@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unstable-nested-components */
 /* eslint-disable no-useless-return */
 /* eslint-disable react/jsx-no-undef */
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Main from "./Main";
@@ -17,6 +17,8 @@ import LoresiMobileTitle from "../images/Loresi/LoresiMobileTitle.webp";
 import ImagePreloader from "./ImagePreloader";
 // import Preloader from "./Preloader";
 import PreloadBackground from "./PreloadBackground/PreloadBackground";
+import Italiana from "../vendor/fonts/Italiana-Regular.woff2";
+import CenturyGothic from "../vendor/fonts/CenturyGothic.woff2";
 
 const MakeAnOrder = lazy(() => import("./MakeAnOrder"));
 const Mare3D = lazy(() => import("./Mare3D"));
@@ -38,6 +40,36 @@ function App() {
     TeaMobileTitle,
     LoresiMobileTitle,
   ];
+
+  useEffect(() => {
+    async function loadFont(fontUrl) {
+      try {
+        const font = new FontFace("CustomFont", `url(${fontUrl}) format('woff2')`, {
+          weight: 400,
+        });
+
+        await font.load();
+        document.fonts.add(font);
+      } catch (error) {
+        console.error("Error loading font:", error);
+      }
+    }
+
+    async function loadFonts() {
+      try {
+        await Promise.all([
+          loadFont(Italiana),
+          loadFont(CenturyGothic),
+        ]);
+
+        // Теперь можно установить стили для текста
+        document.body.style.fontFamily = "CustomFont, sans-serif";
+      } catch (error) {
+        console.error("Error loading fonts:", error);
+      }
+    }
+    loadFonts();
+  }, []);
 
   return (
     <ImagePreloader images={imagesToPreloadHeader}>
