@@ -72,11 +72,11 @@ export default function Header({ images }) {
           <a href="#portfolio" className="header__nav">
             Портфолио
           </a>
-          <a href="prices" onClick={goToPrices} className="header__nav">
+          <a href="#prices" onClick={goToPrices} className="header__nav">
             Стоимость услуг
           </a>
           <a
-            href="make-an-order"
+            href="#make-an-order"
             onClick={goToMakeAnOrder}
             className="header__nav"
           >

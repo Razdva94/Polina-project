@@ -15,12 +15,13 @@ import MareMobileTitle from "../images/Mare/MareMobileTitle_16_11zon.webp";
 import TeaMobileTitle from "../images/Tea/TeaMobileTitle_28_11zon.webp";
 import LoresiMobileTitle from "../images/Loresi/LoresiMobileTitle.webp";
 import ImagePreloader from "./ImagePreloader";
-// import Preloader from "./Preloader";
 import PreloadBackground from "./PreloadBackground/PreloadBackground";
+import MakeAnOrder from "./MakeAnOrder";
 import Italiana from "../vendor/fonts/Italiana-Regular.woff2";
 import CenturyGothic from "../vendor/fonts/CenturyGothic.woff2";
+import "./App.css";
 
-const MakeAnOrder = lazy(() => import("./MakeAnOrder"));
+// const MakeAnOrder = lazy(() => import("./MakeAnOrder"));
 const Mare3D = lazy(() => import("./Mare3D"));
 const Tea3D = lazy(() => import("./Tea3D"));
 const LoresiProject = lazy(() => import("./LoresiProject"));
@@ -30,7 +31,7 @@ const Loresi3D = lazy(() => import("./Loresi3D"));
 const Prices = lazy(() => import("./Prices"));
 const AboutMe = lazy(() => import("./AboutMe"));
 
-function App() {
+const App = () => {
   const location = useLocation();
   const imagesToPreloadHeader = [
     MareTitle,
@@ -63,8 +64,8 @@ function App() {
       try {
         await Promise.all([loadFont(CenturyGothic), loadFont(Italiana)]);
 
-        // Теперь можно установить стили для текста
-        document.body.style.fontFamily = "CustomFont, sans-serif, Unbounded, Inter, ProsoOne";
+        document.body.style.fontFamily =
+          "CustomFont, sans-serif, Unbounded, Inter, ProsoOne";
       } catch (error) {
         console.error("Error loading fonts:", error);
       }
@@ -77,13 +78,14 @@ function App() {
       <div className="page">
         <Routes location={location} key={location.pathname}>
           <Route
+            exact
             path="/"
             element={(
-              <ImagePreloader images={imagesToPreloadHeader}>
+              <ImagePreloader
+                images={imagesToPreloadHeader}
+              >
                 <LateralInfo />
-                <div
-                  className="page__container"
-                >
+                <div className="page__container">
                   <Header images={imagesToPreloadHeader} className="header" />
                   <Main />
                   <Footer />
@@ -92,7 +94,7 @@ function App() {
                   <TeaProject />
                 </div>
               </ImagePreloader>
-              )}
+            )}
           />
 
           <Route
@@ -108,7 +110,7 @@ function App() {
                   <Mare3D />
                 </Suspense>
               </motion.div>
-              )}
+            )}
           />
           <Route
             path="/tea3D"
@@ -123,7 +125,7 @@ function App() {
                   <Tea3D />
                 </Suspense>
               </motion.div>
-              )}
+            )}
           />
           <Route
             path="/loresi3D"
@@ -138,39 +140,39 @@ function App() {
                   <Loresi3D />
                 </Suspense>
               </motion.div>
-              )}
+            )}
           />
           <Route
             path="/make-an-order"
             element={(
-              <div>
+              <div className="fade-in">
                 <LateralInfo />
                 <MakeAnOrder />
               </div>
-              )}
+            )}
           />
           <Route
             path="/prices"
             element={(
-              <div>
+              <div className="fade-in">
                 <LateralInfo />
                 <Prices />
               </div>
-              )}
+            )}
           />
           <Route
             path="/about-me"
             element={(
-              <div>
+              <div className="fade-in">
                 <LateralInfo />
                 <AboutMe />
               </div>
-              )}
+            )}
           />
         </Routes>
       </div>
     </div>
   );
-}
+};
 
-export default App;
+export default React.memo(App);

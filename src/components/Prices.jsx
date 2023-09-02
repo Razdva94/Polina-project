@@ -2,83 +2,88 @@
 import React from "react";
 import Footer from "./Footer";
 
-const logoLite = [
-  "1 концепция логотипа с презентацией",
-  "1 этап правок в рамках брифа",
-  "2-3 альтернативные версии логотипа",
-  "Адаптация на тёмном, светлом и прозрачном фоне",
-  "Файлы для Web (jpg, png) и печати (pdf, ai, eps)",
-  "Logobook - руководство по использованию логотипа",
-  "Срок разработки 10-12 дней",
-];
-
-const logoStandart = [
-  "2 концепция логотипа с презентацией",
-  "2 этапа правок в рамках брифа",
-  "2-3 альтернативные версии логотипа",
-  "Сокращённая версия логотипа",
-  "Адаптация на тёмном, светлом и прозрачном фоне",
-  "Файлы для Web (jpg, png) и печати (pdf, ai, eps)",
-  "Logobook - руководство по использованию логотипа",
-  "Срок разработки 10-12 дней",
-];
-
-const formStyle = [
-  "2 концепция логотипа с расширенной презентацией",
-  "3 этапа правок в рамках брифа",
-  "2-3 альтернативные версии логотипа",
-  "Сокращённая версия логотипа",
-  "Адаптация на тёмном, светлом и прозрачном фоне",
-  "Подбор шрифтов и цветовой палитры (RGB, SMYK)",
-  "5 макетов на выбор (визитка/прайс и т.д.)",
-  "Файлы для Web (jpg, png) и печати (pdf ai eps)",
-  "Guidebook - руководство по использованию фирменного стиля",
-  "срок разработки 15 дней",
-];
-
-const instagram = [
-  "Анализ профиля",
-  "Оформление шапки профиля",
-  "Аватарка профиля",
-  "Оформление актуальных сторис",
-  "Оформление ленты (12-15 постов)",
-  "Отбор и цветокоррекция ваших фото",
-  "Подбор материала с фотостоков",
-  "Инструкция для самостоятельного ведения профиля",
-  "Срок разарботки 7-10 дней",
-];
-
-const poligraph = [
-  "Визитка",
-  "Бирка",
-  "Наклейка",
-  "Сертификат",
-  "Флаер/листовка",
-  "Прайс",
-  "Срок разработки 3-5 дней",
-];
-
-const poligraphPrices = [
-  "1000  ₽",
-  "1000  ₽",
-  "1000  ₽",
-  "1300  ₽",
-  "1300  ₽",
-  "1300  ₽",
-];
-
 function Prices() {
+  const logoLite = [
+    "1 концепция логотипа с презентацией",
+    "1 этап правок в рамках брифа",
+    "2-3 альтернативные версии логотипа",
+    "Адаптация на тёмном, светлом и прозрачном фоне",
+    "Файлы для Web (jpg, png) и печати (pdf, ai, eps)",
+    "Logobook - руководство по использованию логотипа",
+    "Срок разработки 10-12 дней",
+  ];
+
+  const logoStandart = [
+    "2 концепция логотипа с презентацией",
+    "2 этапа правок в рамках брифа",
+    "2-3 альтернативные версии логотипа",
+    "Сокращённая версия логотипа",
+    "Адаптация на тёмном, светлом и прозрачном фоне",
+    "Файлы для Web (jpg, png) и печати (pdf, ai, eps)",
+    "Logobook - руководство по использованию логотипа",
+    "Срок разработки 10-12 дней",
+  ];
+
+  const formStyle = [
+    "2 концепция логотипа с расширенной презентацией",
+    "3 этапа правок в рамках брифа",
+    "2-3 альтернативные версии логотипа",
+    "Сокращённая версия логотипа",
+    "Адаптация на тёмном, светлом и прозрачном фоне",
+    "Подбор шрифтов и цветовой палитры (RGB, SMYK)",
+    "5 макетов на выбор (визитка/прайс и т.д.)",
+    "Файлы для Web (jpg, png) и печати (pdf ai eps)",
+    "Guidebook - руководство по использованию фирменного стиля",
+    "срок разработки 15 дней",
+  ];
+
+  const instagram = [
+    "Анализ профиля",
+    "Оформление шапки профиля",
+    "Аватарка профиля",
+    "Оформление актуальных сторис",
+    "Оформление ленты (12-15 постов)",
+    "Отбор и цветокоррекция ваших фото",
+    "Подбор материала с фотостоков",
+    "Инструкция для самостоятельного ведения профиля",
+    "Срок разарботки 7-10 дней",
+  ];
+
+  const poligraph = [
+    "Визитка",
+    "Бирка",
+    "Наклейка",
+    "Сертификат",
+    "Флаер/листовка",
+    "Прайс",
+    "Срок разработки 3-5 дней",
+  ];
+
+  const poligraphPrices = [
+    "1000  ₽",
+    "1000  ₽",
+    "1000  ₽",
+    "1300  ₽",
+    "1300  ₽",
+    "1300  ₽",
+  ];
   return (
     <div className="page__container">
       <div className="prices">
-        <h2 className="prices__header" id="prices">СТОИМОСТЬ УСЛУГ</h2>
+        <h2 className="prices__header" id="prices">
+          СТОИМОСТЬ УСЛУГ
+        </h2>
         <div className="prices__container">
           <div className="prices__block">
             <h2 className="prices__title">
               <span style={{ fontFamily: "ProstoOne" }}>Логотип </span>Lite
             </h2>
-            {logoLite.map((string) => {
-              return <p className="prices__text">{string}</p>;
+            {logoLite.map((string, i) => {
+              return (
+                <p key={i} className="prices__text">
+                  {string}
+                </p>
+              );
             })}
             <p
               className="prices__text"
@@ -96,8 +101,8 @@ function Prices() {
             <h2 className="prices__title">
               <span style={{ fontFamily: "ProstoOne" }}>Логотип </span> Standart
             </h2>
-            {logoStandart.map((string) => {
-              return <p className="prices__text">{string}</p>;
+            {logoStandart.map((string, i) => {
+              return <p key={i} className="prices__text">{string}</p>;
             })}
             <p
               className="prices__text"
@@ -115,8 +120,8 @@ function Prices() {
             <h2 className="prices__title">
               <span style={{ fontFamily: "ProstoOne" }}>Фирменный стиль</span>
             </h2>
-            {formStyle.map((string) => {
-              return <p className="prices__text">{string}</p>;
+            {formStyle.map((string, i) => {
+              return <p key={i} className="prices__text">{string}</p>;
             })}
             <p
               className="prices__text"
@@ -134,8 +139,8 @@ function Prices() {
             <h2 className="prices__title">
               <span style={{ fontFamily: "ProstoOne" }}>Instagram</span>
             </h2>
-            {instagram.map((string) => {
-              return <p className="prices__text">{string}</p>;
+            {instagram.map((string, i) => {
+              return <p key={i} className="prices__text">{string}</p>;
             })}
             <p
               className="prices__text"
@@ -155,9 +160,12 @@ function Prices() {
             </h2>
             {poligraph.map((string, i) => {
               return (
-                <p className="prices__text">
+                <p key={i} className="prices__text">
                   {string}
-                  <span style={{ float: "right", fontFamily: "Inter" }}>{i !== 6 ? <>&rarr;</> : ""}{poligraphPrices[i]}</span>
+                  <span style={{ float: "right", fontFamily: "Inter" }}>
+                    {i !== 6 ? <>&rarr;</> : ""}
+                    {poligraphPrices[i]}
+                  </span>
                 </p>
               );
             })}

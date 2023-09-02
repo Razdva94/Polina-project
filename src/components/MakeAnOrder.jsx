@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Select from "react-select";
-import { motion } from "framer-motion";
 import Footer from "./Footer";
 import api from "../utils/api";
 import Popup from "./Popup";
@@ -21,6 +20,10 @@ const customStyles = {
     border: state.isFocused ? "1px solid white" : "1px solid grey",
     height: "50px",
   }),
+  valueContainer: (provided) => ({
+    ...provided,
+    paddingLeft: "0",
+  }),
   option: (provided, { isSelected }) => ({
     ...provided,
     cursor: "pointer",
@@ -35,7 +38,7 @@ const customStyles = {
   }),
 };
 
-function MakeAnOrder() {
+const MakeAnOrder = () => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [popupState, setPopupState] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -71,23 +74,12 @@ function MakeAnOrder() {
   }
 
   return (
-    <motion.div
-      className="page__container"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.7 }}
-    >
+    <div className="page__container">
       <div className="order">
-        <h2
-          className="order__header"
-          id="make-an-order"
-        >
+        <h2 className="order__header" id="make-an-order">
           Оформить заказ
         </h2>
-        <div
-          className="order__container"
-        >
+        <div className="order__container">
           <form className="form" onSubmit={deliverMessage}>
             <input
               type="text"
@@ -176,8 +168,8 @@ function MakeAnOrder() {
       </div>
       <Footer />
       {popupState ? <Popup regectMessage={regectMessage} /> : ""}
-    </motion.div>
+    </div>
   );
-}
+};
 
-export default MakeAnOrder;
+export default React.memo(MakeAnOrder);

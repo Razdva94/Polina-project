@@ -1,9 +1,10 @@
 .order{
   padding: 0 20%;
-  padding-bottom: 5%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  min-height: calc(100vh - 175px);
+  margin-bottom: 70px;
 }
 @media screen and (max-width: 1076px){
   .order{

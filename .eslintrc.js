@@ -67,5 +67,6 @@ module.exports = {
     "react/jsx-closing-tag-location": "off",
     "import/no-duplicates": "off",
     "react/jsx-one-expression-per-line": "off",
+    "react/function-component-definition": "off",
   },
 };

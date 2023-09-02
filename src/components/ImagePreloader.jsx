@@ -3,7 +3,6 @@ import Preloader from "./Preloader";
 
 function ImagePreloader({ images, children }) {
   const [isLoaded, setIsLoaded] = useState(false);
-
   useEffect(() => {
     const preloadImages = async () => {
       const promises = images.map((src) => {
@@ -29,4 +28,4 @@ function ImagePreloader({ images, children }) {
   return isLoaded ? children : <Preloader />;
 }
 
-export default ImagePreloader;
+export default React.memo(ImagePreloader);
