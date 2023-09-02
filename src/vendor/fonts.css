@@ -6,37 +6,41 @@
   font-weight: 400;
   /* font-display: block; */
 }
+
 @font-face {
   font-family: 'Inter';
-  font-style:  normal;
+  font-style: normal;
   font-weight: 500;
   font-display: block;
   src: url(./fonts/Inter-Medium.woff2) format("woff2"),
-       url(./fonts/Inter-Medium.woff) format("woff");
-       /* font-display: block; */
+    url(./fonts/Inter-Medium.woff) format("woff");
+  /* font-display: block; */
 }
+
 @font-face {
   font-family: 'Inter';
-  font-style:  normal;
+  font-style: normal;
   font-weight: 900;
   font-display: block;
   src: url(./fonts/Inter-Black.woff2) format("woff2"),
-       url(./fonts/Inter-Black.woff) format("woff");
-       /* font-display: block; */
+    url(./fonts/Inter-Black.woff) format("woff");
+  font-display: swap;
 }
+
 @font-face {
   font-family: 'Unbounded';
   src: url(./fonts/Unbounded-Regular.ttf) format('truetype');
   font-weight: 400;
-  /* font-display: block; */
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'ProstoOne';
   src: url(./fonts/ProstoOne-Regular.ttf) format('truetype');
   font-weight: 400;
-  font-display: fallback;
+  font-display: swap;
 }
+
 @font-face {
   font-family: 'Italiana';
   src: url(./fonts/Italiana-Regular.woff2) format('woff2');
@@ -53,9 +57,10 @@
 
 @font-face {
   font-family: 'CustomFont';
-  src: 
-    url(./fonts/Italiana-Regular.woff2) format('woff2'),
-    url(./fonts/CenturyGothic.woff2) format('woff2');
+  src:
+    url(./fonts/CenturyGothic.woff2) format('woff2'),
+    url(./fonts/Italiana-Regular.woff2) format('woff2');
   font-weight: 400;
-  font-display: swap; /* Установите font-display в swap */
+  font-display: swap;
+  /* Установите font-display в swap */
 }

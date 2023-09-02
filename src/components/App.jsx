@@ -61,10 +61,10 @@ function App() {
 
     async function loadFonts() {
       try {
-        await Promise.all([loadFont(Italiana), loadFont(CenturyGothic)]);
+        await Promise.all([loadFont(CenturyGothic), loadFont(Italiana)]);
 
         // Теперь можно установить стили для текста
-        document.body.style.fontFamily = "CustomFont, sans-serif";
+        document.body.style.fontFamily = "CustomFont, sans-serif, Unbounded, Inter, ProsoOne";
       } catch (error) {
         console.error("Error loading fonts:", error);
       }
@@ -73,111 +73,109 @@ function App() {
   }, []);
 
   return (
-    <ImagePreloader images={imagesToPreloadHeader}>
-      <div>
-        <div className="page">
-          <Routes location={location} key={location.pathname}>
-            <Route
-              path="/"
-              element={(
-                <>
-                  <LateralInfo />
-                  <div
-                    className="page__container"
-                  >
-                    <Header images={imagesToPreloadHeader} className="header" />
-                    <Main />
-                    <Footer />
-                    <LoresiProject />
-                    <MareProject />
-                    <TeaProject />
-                  </div>
-                </>
+    <div>
+      <div className="page">
+        <Routes location={location} key={location.pathname}>
+          <Route
+            path="/"
+            element={(
+              <ImagePreloader images={imagesToPreloadHeader}>
+                <LateralInfo />
+                <div
+                  className="page__container"
+                >
+                  <Header images={imagesToPreloadHeader} className="header" />
+                  <Main />
+                  <Footer />
+                  <LoresiProject />
+                  <MareProject />
+                  <TeaProject />
+                </div>
+              </ImagePreloader>
               )}
-            />
+          />
 
-            <Route
-              path="/mare3D"
-              element={(
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <Suspense fallback={<PreloadBackground />}>
-                    <Mare3D />
-                  </Suspense>
-                </motion.div>
+          <Route
+            path="/mare3D"
+            element={(
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <Suspense fallback={<PreloadBackground />}>
+                  <Mare3D />
+                </Suspense>
+              </motion.div>
               )}
-            />
-            <Route
-              path="/tea3D"
-              element={(
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <Suspense fallback={<PreloadBackground />}>
-                    <Tea3D />
-                  </Suspense>
-                </motion.div>
+          />
+          <Route
+            path="/tea3D"
+            element={(
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <Suspense fallback={<PreloadBackground />}>
+                  <Tea3D />
+                </Suspense>
+              </motion.div>
               )}
-            />
-            <Route
-              path="/loresi3D"
-              element={(
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <Suspense fallback={<PreloadBackground />}>
-                    <Loresi3D />
-                  </Suspense>
-                </motion.div>
+          />
+          <Route
+            path="/loresi3D"
+            element={(
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <Suspense fallback={<PreloadBackground />}>
+                  <Loresi3D />
+                </Suspense>
+              </motion.div>
               )}
-            />
-            <Route
-              path="/make-an-order"
-              element={(
-                <div>
-                  <Suspense fallback={<PreloadBackground />}>
-                    <LateralInfo />
-                    <MakeAnOrder />
-                  </Suspense>
-                </div>
+          />
+          <Route
+            path="/make-an-order"
+            element={(
+              <div>
+                <Suspense fallback={<PreloadBackground />}>
+                  <LateralInfo />
+                  <MakeAnOrder />
+                </Suspense>
+              </div>
               )}
-            />
-            <Route
-              path="/prices"
-              element={(
-                <div>
-                  <Suspense fallback={<PreloadBackground />}>
-                    <LateralInfo />
-                    <Prices />
-                  </Suspense>
-                </div>
+          />
+          <Route
+            path="/prices"
+            element={(
+              <div>
+                <Suspense fallback={<PreloadBackground />}>
+                  <LateralInfo />
+                  <Prices />
+                </Suspense>
+              </div>
               )}
-            />
-            <Route
-              path="/about-me"
-              element={(
-                <div>
-                  <Suspense fallback={<PreloadBackground />}>
-                    <LateralInfo />
-                    <AboutMe />
-                  </Suspense>
-                </div>
+          />
+          <Route
+            path="/about-me"
+            element={(
+              <div>
+                <Suspense fallback={<PreloadBackground />}>
+                  <LateralInfo />
+                  <AboutMe />
+                </Suspense>
+              </div>
               )}
-            />
-          </Routes>
-        </div>
+          />
+        </Routes>
       </div>
-    </ImagePreloader>
+    </div>
   );
 }
 
