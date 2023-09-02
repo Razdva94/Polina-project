@@ -5,8 +5,8 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import store from "./store";
 import reportWebVitals from "./reportWebVitals";
-// import Preloader from "./components/Preloader";
-import PreloadBackground from "./components/PreloadBackground/PreloadBackground";
+import Preloader from "./components/Preloader";
+// import PreloadBackground from "./components/PreloadBackground/PreloadBackground";
 
 const App = lazy(() => import("./components/App"));
 
@@ -15,7 +15,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
-        <Suspense fallback={<PreloadBackground />}>
+        <Suspense fallback={<Preloader />}>
           <App />
         </Suspense>
       </Provider>
