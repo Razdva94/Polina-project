@@ -1,0 +1,12 @@
+.portfolio__button{
+  all: unset;
+  cursor: pointer;
+  margin-top: 25px;
+  padding: 10px;
+  border: 1px solid black;
+  transition: transform .1s linear;
+}
+
+.portfolio__button:hover{
+  transform: scale(1.1);
+}

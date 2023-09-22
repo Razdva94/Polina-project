@@ -1,5 +1,12 @@
-.portfolio{
+.portfolio {
+  position: relative;
   background-color: rgb(7, 7, 7);
   padding-bottom: 30px;
   padding-top: 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 11;
 }
+
+

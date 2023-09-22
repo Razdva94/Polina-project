@@ -15,3 +15,25 @@
   opacity: 0;
   transition: opacity 300ms linear
 }
+
+.swiper-button-next::after {
+  color: white;
+}
+
+.swiper-button-prev::after {
+  color: white;
+}
+
+.mySwiper1 {
+  width: calc(var(--index) * var(--side-big)*.77);
+  height: calc(var(--index) * var(--side-big)*.63);
+  margin: auto;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 380px) {
+  .mySwiper1 {
+    width: calc(var(--index) * var(--side-big)*.63);
+    height: calc(var(--index) * var(--side-big)*.43);
+  }
+}

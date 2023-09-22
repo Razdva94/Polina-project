@@ -4,11 +4,11 @@ import { useNavigate } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { startTransition } from "react";
 import "../blocks/header/header__swiper-styles.css";
 
-SwiperCore.use([Autoplay, Pagination, Navigation]);
+// SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 export default function Header({ images }) {
   const navigate = useNavigate();

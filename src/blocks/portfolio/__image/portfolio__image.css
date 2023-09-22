@@ -1,19 +1,13 @@
 .portfolio__image {
-  transition: transform .3s ease-in-out;
-  cursor: pointer;
   justify-self: center;
   height: 100%;
   width: 100%;
   object-fit: contain;
 }
 
-.portfolio__image:hover {
-  transform: scale(1.05);
-}
-
 @media screen and (max-width: 350px){
   .portfolio__image {
-    height: 290px;
-    width: 290px;
+    height: 270px;
+    width: 270px;
   }
 }
