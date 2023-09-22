@@ -135,7 +135,7 @@ export default function Main() {
       <div
         style={{
           color: "white",
-          width: "calc(var(--index) * var(--side-big)*.6)",
+          width: "calc(var(--index) * var(--side-big)*.9)",
           marginTop: "30px",
         }}
       >
@@ -153,7 +153,7 @@ export default function Main() {
           onClick={handleOpenPictures}
           className="portfolio__button"
         >
-          ⮞ Увидеть больше{" "}
+          &rarr; Увидеть больше{" "}
         </button>
       </div>
     </section>

@@ -25,7 +25,7 @@
 }
 
 .mySwiper1 {
-  width: calc(var(--index) * var(--side-big)*.77);
+  width: calc(var(--index) * var(--side-big)*.87);
   height: calc(var(--index) * var(--side-big)*.63);
   margin: auto;
   margin-top: 30px;
@@ -33,7 +33,7 @@
 
 @media screen and (max-width: 380px) {
   .mySwiper1 {
-    width: calc(var(--index) * var(--side-big)*.63);
-    height: calc(var(--index) * var(--side-big)*.43);
+    width: calc(var(--index) * var(--side-big)*1.05);
+    height: calc(var(--index) * var(--side-big)*.73);
   }
 }
