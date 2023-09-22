@@ -81,11 +81,11 @@ export default function Main() {
   const [index, setIndex] = useState(0);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  function handleOpenPictures(e) {
+  function handleOpenPictures() {
     if (isMobile || isTablet) {
-      index === 0 ? dispatch(openPortfolioPictures(e.target.alt)) : "";
-      index === 1 ? dispatch(openPortfolioPictures(e.target.alt)) : "";
-      index === 2 ? dispatch(openPortfolioPictures(e.target.alt)) : "";
+      index === 0 ? dispatch(openPortfolioPictures("Mare")) : "";
+      index === 1 ? dispatch(openPortfolioPictures("Tea")) : "";
+      index === 2 ? dispatch(openPortfolioPictures("Loresi")) : "";
     } else {
       index === 0 ? navigate("/mare3D") : "";
       index === 1 ? navigate("/tea3D") : "";
