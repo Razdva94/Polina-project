@@ -3,15 +3,15 @@ import React from "react";
 import Footer from "./Footer";
 
 function Prices() {
-  const logoLite = [
-    "1 концепция логотипа с презентацией",
-    "1 этап правок в рамках брифа",
-    "2-3 альтернативные версии логотипа",
-    "Адаптация на тёмном, светлом и прозрачном фоне",
-    "Файлы для Web (jpg, png) и печати (pdf, ai, eps)",
-    "Logobook - руководство по использованию логотипа",
-    "Срок разработки 10-12 дней",
-  ];
+  // const logoLite = [
+  //   "1 концепция логотипа с презентацией",
+  //   "1 этап правок в рамках брифа",
+  //   "2-3 альтернативные версии логотипа",
+  //   "Адаптация на тёмном, светлом и прозрачном фоне",
+  //   "Файлы для Web (jpg, png) и печати (pdf, ai, eps)",
+  //   "Logobook - руководство по использованию логотипа",
+  //   "Срок разработки 10-12 дней",
+  // ];
 
   const logoStandart = [
     "2 концепция логотипа с презентацией",
@@ -20,18 +20,17 @@ function Prices() {
     "Сокращённая версия логотипа",
     "Адаптация на тёмном, светлом и прозрачном фоне",
     "Файлы для Web (jpg, png) и печати (pdf, ai, eps)",
-    "Logobook - руководство по использованию логотипа",
     "Срок разработки 10-12 дней",
   ];
 
   const formStyle = [
-    "2 концепция логотипа с расширенной презентацией",
+    "2 концепции логотипа с расширенной презентацией",
     "3 этапа правок в рамках брифа",
     "2-3 альтернативные версии логотипа",
     "Сокращённая версия логотипа",
     "Адаптация на тёмном, светлом и прозрачном фоне",
     "Подбор шрифтов и цветовой палитры (RGB, SMYK)",
-    "5 макетов на выбор (визитка/прайс и т.д.)",
+    "4 макета на выбор (визитка/прайс и т.д.)",
     "Файлы для Web (jpg, png) и печати (pdf ai eps)",
     "Guidebook - руководство по использованию фирменного стиля",
     "срок разработки 15 дней",
@@ -74,7 +73,7 @@ function Prices() {
           СТОИМОСТЬ УСЛУГ
         </h2>
         <div className="prices__container">
-          <div className="prices__block">
+          {/* <div className="prices__block">
             <h2 className="prices__title">
               <span style={{ fontFamily: "ProstoOne" }}>Логотип </span>Lite
             </h2>
@@ -96,10 +95,10 @@ function Prices() {
             >
               &rarr; 6000 ₽.
             </p>
-          </div>
+          </div> */}
           <div className="prices__block">
             <h2 className="prices__title">
-              <span style={{ fontFamily: "ProstoOne" }}>Логотип </span> Standart
+              <span style={{ fontFamily: "ProstoOne" }}>Логотип </span>
             </h2>
             {logoStandart.map((string, i) => {
               return <p key={i} className="prices__text">{string}</p>;
@@ -132,7 +131,7 @@ function Prices() {
                 marginTop: "auto",
               }}
             >
-              &rarr; 12000 ₽.
+              &rarr; 18000 ₽.
             </p>
           </div>
           <div className="prices__block">
