@@ -83,7 +83,7 @@ export default function Header({ images }) {
             Оформить заказ
           </a>
         </nav>
-        <h1 className="header__text header__text_type_name">Maisheva Polina</h1>
+        <h1 className="header__text header__text_type_name">Antonova Polina</h1>
         <h2 className="header__text header__text_type_profession">
           Бренд-дизайнер
         </h2>

@@ -43,7 +43,7 @@ function LateralInfo() {
       <div className="lateral-info">
         <a style={{ textDecoration: "none" }} href="#main">
           <div className="lateral-info__text" onClick={navigatetoMain}>
-            Maisheva Polina
+            Antonova Polina
           </div>
         </a>
         <button

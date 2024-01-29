@@ -6,55 +6,63 @@ function Prices() {
   const logoStandart = [
     "2 концепции логотипа с презентацией",
     "2 этапа правок в рамках брифа",
-    "2-3 альтернативные версии логотипа",
-    "Сокращённая версия логотипа",
+    "3 альтернативные версии логотипа",
+    "Подбор цветовой палитры",
     "Адаптация на тёмном, светлом и прозрачном фоне",
     "Файлы для Web (jpg, png) и печати (pdf, ai, eps)",
-    "Срок разработки 10-12 дней",
+    "Срок разработки до 10 дней",
   ];
 
   const formStyle = [
-    "2 концепции логотипа с расширенной презентацией",
-    "3 этапа правок в рамках брифа",
-    "2-3 альтернативные версии логотипа",
-    "Сокращённая версия логотипа",
-    "Адаптация на тёмном, светлом и прозрачном фоне",
+    "Логотип (все, что входит в пакет)",
     "Подбор шрифтов и цветовой палитры (RGB, SMYK)",
-    "4 макета на выбор (визитка/прайс и т.д.)",
+    "Подбор фирменной графики",
+    "Разработка фирменного паттерна",
+    "Рекомендации по фотостилю",
+    "4 макета на выбор (оговариваются индивидуально)",
     "Файлы для Web (jpg, png) и печати (pdf ai eps)",
-    "Guidebook — руководство по использованию фирменного стиля",
-    "Срок разработки 15 дней",
-  ];
-
-  const instagram = [
-    "Анализ профиля",
-    "Оформление шапки профиля",
-    "Аватарка профиля",
-    "Оформление актуальных сторис",
-    "Оформление ленты (12-15 постов)",
-    "Отбор и цветокоррекция ваших фото",
-    "Подбор материала с фотостоков",
-    "Инструкция для самостоятельного ведения профиля",
-    "Срок разработки 7-10 дней",
+    "GUIDEBOOK — руководство по использованию фирменного стиля",
+    "Срок разработки до 16 дней",
   ];
 
   const poligraph = [
-    "Визитка",
-    "Бирка",
     "Наклейка",
-    "Сертификат",
-    "Флаер/листовка",
-    "Прайс",
-    "Срок разработки 3-5 дней",
+    "Этикетка",
+    "Бирка",
+    "Визитка",
+    "Флайер/Листовка",
+    "Прайс-лист",
+    "Меню",
+    "Подарочный сертификат",
+    "Открытка",
+    "Буклет",
+    "Приглашение",
+    "Фирменный бланк",
+    "Афиша/Плакат",
+    "Евробуклет",
+    "Пакет",
+    "Коробка",
+    "Верстка страницы",
   ];
 
   const poligraphPrices = [
     "1000  ₽",
-    "1000  ₽",
-    "1000  ₽",
-    "1300  ₽",
-    "1300  ₽",
-    "1300  ₽",
+    "1500  ₽",
+    "1500  ₽",
+    "1500  ₽",
+    "1500  ₽",
+    "2000  ₽",
+    "2000  ₽",
+    "2000  ₽",
+    "2000  ₽",
+    "2000  ₽",
+    "2000  ₽",
+    "2000  ₽",
+    "2000  ₽",
+    "2500  ₽",
+    "3000  ₽",
+    "3000  ₽",
+    "300 ₽/стр",
   ];
   return (
     <div className="page__container">
@@ -63,73 +71,16 @@ function Prices() {
           СТОИМОСТЬ УСЛУГ
         </h2>
         <div className="prices__container">
-          {/* <div className="prices__block">
-            <h2 className="prices__title">
-              <span style={{ fontFamily: "ProstoOne" }}>Логотип </span>Lite
-            </h2>
-            {logoLite.map((string, i) => {
-              return (
-                <p key={i} className="prices__text">
-                  {string}
-                </p>
-              );
-            })}
-            <p
-              className="prices__text"
-              style={{
-                marginBottom: "0",
-                marginTop: "auto",
-                fontFamily: "Inter",
-                paddingTop: "35px",
-              }}
-            >
-              &rarr; 6000 ₽.
-            </p>
-          </div> */}
           <div className="prices__block">
             <h2 className="prices__title">
               <span style={{ fontFamily: "ProstoOne" }}>Логотип </span>
             </h2>
             {logoStandart.map((string, i) => {
-              return <p key={i} className="prices__text">{string}</p>;
-            })}
-            <p
-              className="prices__text"
-              style={{
-                fontFamily: "Inter",
-                marginBottom: "0",
-                paddingTop: "35px",
-                marginTop: "auto",
-              }}
-            >
-              &rarr; 9000 ₽.
-            </p>
-          </div>
-          <div className="prices__block">
-            <h2 className="prices__title">
-              <span style={{ fontFamily: "ProstoOne" }}>Фирменный стиль</span>
-            </h2>
-            {formStyle.map((string, i) => {
-              return <p key={i} className="prices__text">{string}</p>;
-            })}
-            <p
-              className="prices__text"
-              style={{
-                fontFamily: "Inter",
-                marginBottom: "0",
-                paddingTop: "35px",
-                marginTop: "auto",
-              }}
-            >
-              &rarr; 18000 ₽.
-            </p>
-          </div>
-          <div className="prices__block">
-            <h2 className="prices__title">
-              <span style={{ fontFamily: "ProstoOne" }}>Instagram</span>
-            </h2>
-            {instagram.map((string, i) => {
-              return <p key={i} className="prices__text">{string}</p>;
+              return (
+                <p key={i} className="prices__text">
+                  {string}
+                </p>
+              );
             })}
             <p
               className="prices__text"
@@ -143,7 +94,30 @@ function Prices() {
               &rarr; 10000 ₽.
             </p>
           </div>
-          <div>
+          <div className="prices__block">
+            <h2 className="prices__title">
+              <span style={{ fontFamily: "ProstoOne" }}>Фирменный стиль</span>
+            </h2>
+            {formStyle.map((string, i) => {
+              return (
+                <p key={i} className="prices__text">
+                  {string}
+                </p>
+              );
+            })}
+            <p
+              className="prices__text"
+              style={{
+                fontFamily: "Inter",
+                marginBottom: "0",
+                paddingTop: "35px",
+                marginTop: "auto",
+              }}
+            >
+              &rarr; 23000 ₽.
+            </p>
+          </div>
+          <div className="prices__block">
             <h2 className="prices__title">
               <span style={{ fontFamily: "ProstoOne" }}>Полиграфия</span>
             </h2>
@@ -152,7 +126,7 @@ function Prices() {
                 <p key={i} className="prices__text">
                   {string}
                   <span style={{ float: "right", fontFamily: "Inter" }}>
-                    {i !== 6 ? <>&rarr;</> : ""}
+                    {i !== 700 ? <>&rarr;</> : ""}
                     {poligraphPrices[i]}
                   </span>
                 </p>
