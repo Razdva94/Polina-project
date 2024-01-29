@@ -5,12 +5,10 @@ import api from "../utils/api";
 import Popup from "./Popup";
 
 const options = [
-  { value: "1", label: "01 | Логотип Lite" },
-  { value: "2", label: "02 | Логотип Standart" },
-  { value: "3", label: "Фирменный стиль" },
-  { value: "4", label: "Полиграфия" },
-  { value: "5", label: "Оформление Instagram" },
-  { value: "6", label: "Другое" },
+  { value: "1", label: "Фирменный стиль" },
+  { value: "2", label: "Логотип" },
+  { value: "3", label: "Полиграфия" },
+  { value: "4", label: "Другое" },
 ];
 
 const customStyles = {
@@ -161,7 +159,6 @@ const MakeAnOrder = () => {
             >
               +BEHANCE
             </a>
-            <p className="form__text">MAISHEVA.POLINA@MAIL.RU</p>
           </div>
         </div>
         <div className="animation"></div>
